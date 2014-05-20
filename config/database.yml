@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: rishighan
+  database: rishi
   pool: 5
   timeout: 5000
   username: rishi

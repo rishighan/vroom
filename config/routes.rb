@@ -8,6 +8,9 @@ RishighanCom::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  #posts
+  resources :posts
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

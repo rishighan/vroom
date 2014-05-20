@@ -28,3 +28,1800 @@ cannot load such file -- bundler/setup (LoadError)
   /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
   /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `<main>'
 
+[ 2014-05-20 15:37:51.3754 55231/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFkcGl1MzUvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1dpiu35/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '55230', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 15:37:51.4509 55233/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.55230/generation-0/request
+[ 2014-05-20 15:37:51.4662 55235/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.55230/generation-0/logging
+[ 2014-05-20 15:37:51.4664 55231/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 55263 stdout: 
+App 55263 stderr: env: 
+App 55263 stderr: python: No such file or directory
+App 55263 stdout: 
+[ 2014-05-20 15:38:03.1891 55233/0x10b7e2000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:38:03.1894 55233/0x10b79f000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 15:39:14.5547 55548/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmdxb3lvNy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.gqoyo7/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '55547', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 15:39:14.5977 55551/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.55547/generation-0/request
+PassengerWatchdog(55555,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(55555,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(55555,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:39:14.6270 55554/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.55547/generation-0/logging
+[ 2014-05-20 15:39:14.6272 55548/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 55716 stdout: 
+App 55716 stderr: env: 
+App 55716 stderr: python: No such file or directory
+App 55716 stdout: 
+[ 2014-05-20 15:39:52.4576 55551/0x10e8c0000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:39:52.4579 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 55825 stdout: 
+App 55825 stderr: env: python: No such file or directory
+App 55825 stdout: 
+[ 2014-05-20 15:39:58.8750 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:39:58.8751 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 55919 stdout: 
+App 55919 stderr: env: 
+App 55919 stderr: python: No such file or directory
+App 55919 stdout: 
+[ 2014-05-20 15:40:03.3179 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:40:03.3181 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 56191 stdout: 
+App 56191 stderr: env: python: No such file or directory
+App 56191 stdout: 
+[ 2014-05-20 15:41:03.7803 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:41:03.7805 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 56284 stdout: 
+App 56284 stderr: env: python: No such file or directory
+App 56284 stdout: 
+[ 2014-05-20 15:41:07.0589 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:41:07.0591 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 56386 stdout: 
+App 56386 stderr: env: 
+App 56386 stderr: python: No such file or directory
+App 56386 stdout: 
+[ 2014-05-20 15:41:17.0710 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:41:17.0712 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 56487 stdout: 
+App 56487 stderr: env: python: No such file or directory
+App 56487 stdout: 
+[ 2014-05-20 15:41:19.3766 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:41:19.3767 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 57137 stdout: 
+App 57137 stderr: env: python: 
+App 57137 stderr: No such file or directory
+App 57137 stdout: 
+[ 2014-05-20 15:42:44.8444 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:42:44.8446 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 57231 stdout: 
+App 57231 stderr: env: 
+App 57231 stderr: python: No such file or directory
+App 57231 stdout: 
+[ 2014-05-20 15:42:49.0001 55551/0x10e729000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:42:49.0002 55551/0x10e87d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 15:43:05.7475 57409/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLng4a2VpNC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.x8kei4/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '57408', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 15:43:05.7743 57411/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.57408/generation-0/request
+PassengerWatchdog(57414,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(57414,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(57414,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:43:05.7885 57413/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.57408/generation-0/logging
+[ 2014-05-20 15:43:05.7888 57409/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 57430 stderr: PassengerHelperAgent(57431,0x1037ac000) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+App 57430 stderr: PassengerHelperAgent(57431,0x103
+App 57430 stderr: 7ac000) malloc: *** error: can't allocate region securely
+App 57430 stderr: PassengerHelperAgent(57431,0x1037ac000) malloc: *** set a breakpoint in malloc_error_break to debug
+App 57430 stdout: 
+App 57430 stderr: env: 
+App 57430 stderr: python: No such file or directory
+App 57430 stdout: 
+[ 2014-05-20 15:43:09.3726 57411/0x1037ac000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:43:09.3729 57411/0x103726000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 15:44:26.0328 57740/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjV1cDY5MC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.5up690/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '57739', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 15:44:26.0497 57742/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.57739/generation-0/request
+[ 2014-05-20 15:44:26.0562 57744/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.57739/generation-0/logging
+[ 2014-05-20 15:44:26.0564 57740/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+PassengerWatchdog (cleaning up...)(57808,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(57808,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(57808,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+App 57916 stdout: 
+App 57916 stderr: env: python: No such file or directory
+App 57916 stdout: 
+[ 2014-05-20 15:45:16.3451 57742/0x108360000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:45:16.3453 57742/0x10831d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 58015 stdout: 
+App 58015 stderr: env: python: No such file or directory
+App 58015 stdout: 
+[ 2014-05-20 15:45:19.5392 57742/0x1081c9000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:45:19.5394 57742/0x10831d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 58203 stdout: 
+App 58203 stderr: env: 
+App 58203 stderr: python: No such file or directory
+App 58203 stdout: 
+[ 2014-05-20 15:45:55.8058 57742/0x1081c9000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:45:55.8060 57742/0x10831d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 58749 stdout: 
+App 58749 stderr: env: python: No such file or directory
+App 58749 stdout: 
+[ 2014-05-20 15:48:15.5117 57742/0x1081c9000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:48:15.5183 57742/0x10831d000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 15:49:47.2287 59103/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFkenEyeGQvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1dzq2xd/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '59102', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(59106,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(59106,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(59106,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:49:47.2478 59105/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.59102/generation-0/request
+PassengerWatchdog(59108,0x7fff7a41c310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(59108,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(59108,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:49:47.2619 59107/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.59102/generation-0/logging
+[ 2014-05-20 15:49:47.2622 59103/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 59140 stdout: 
+App 59140 stderr: env: 
+App 59140 stderr: python: No such file or directory
+App 59140 stdout: 
+[ 2014-05-20 15:49:57.9054 59105/0x10498c000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:49:57.9056 59105/0x104949000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 59395 stdout: 
+App 59395 stderr: env: python: No such file or directory
+App 59395 stdout: 
+[ 2014-05-20 15:50:49.3294 59105/0x1047f5000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:50:49.3296 59105/0x104949000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 15:50:56.6315 59510/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLnNmdzRuMy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.sfw4n3/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '59509', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(59513,0x7fff7a41c310) malloc: *** mach_vm_map(size=1048576) failed (error code=268435459)
+PassengerWatchdog(59513,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(59513,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:50:56.6585 59512/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.59509/generation-0/request
+[ 2014-05-20 15:50:56.6726 59514/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.59509/generation-0/logging
+[ 2014-05-20 15:50:56.6728 59510/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 59540 stdout: 
+App 59540 stderr: env: 
+App 59540 stderr: python: No such file or directory
+App 59540 stdout: 
+[ 2014-05-20 15:51:03.2229 59512/0x10307a000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:51:03.2231 59512/0x103037000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 59711 stdout: 
+App 59711 stderr: env: python: No such file or directory
+App 59711 stdout: 
+[ 2014-05-20 15:51:17.4144 59512/0x102ee3000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:51:17.4146 59512/0x103037000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+PassengerWatchdog (cleaning up...)(59827,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(59827,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(59827,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:51:34.7639 59842/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLm13bGZwci90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.mwlfpr/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '59841', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(59845,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(59845,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(59845,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:51:34.7804 59844/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.59841/generation-0/request
+PassengerWatchdog(59847,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(59847,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(59847,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 15:51:34.7874 59846/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.59841/generation-0/logging
+[ 2014-05-20 15:51:34.7877 59842/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 59859 stdout: 
+App 59859 stderr: env: python
+App 59859 stderr: : No such file or directory
+App 59859 stdout: 
+[ 2014-05-20 15:51:36.5307 59844/0x10263a000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:51:36.5310 59844/0x1025b4000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 59957 stdout: 
+App 59957 stderr: env: 
+App 59957 stderr: python: No such file or directory
+App 59957 stdout: 
+[ 2014-05-20 15:51:37.2624 59844/0x10260d000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:51:37.2625 59844/0x1025b4000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 60060 stdout: 
+App 60060 stderr: env: python: No such file or directory
+App 60060 stdout: 
+[ 2014-05-20 15:51:42.3956 59844/0x10244a000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:51:42.3958 59844/0x1025b4000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 61418 stdout: 
+App 61418 stderr: env: 
+App 61418 stderr: python: No such file or directory
+App 61418 stdout: 
+[ 2014-05-20 15:59:41.6877 59844/0x10244a000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 15:59:41.6879 59844/0x1025b4000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 61932 stdout: 
+App 61932 stderr: env: python: No such file or directory
+App 61932 stdout: 
+[ 2014-05-20 16:01:38.8685 59844/0x10244a000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:01:38.8686 59844/0x1025b4000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:01:43.6785 62047/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmcyczEzay90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.g2s13k/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '62046', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 16:01:43.7089 62049/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.62046/generation-0/request
+[ 2014-05-20 16:01:43.7232 62051/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.62046/generation-0/logging
+[ 2014-05-20 16:01:43.7234 62047/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 62068 stdout: 
+App 62068 stderr: env: python: 
+App 62068 stderr: No such file or directory
+App 62068 stdout: 
+[ 2014-05-20 16:01:46.2053 62049/0x1043a9000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:01:46.2055 62049/0x104323000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:01:46.2071 62049/0x104323000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 22] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+PassengerWatchdog (cleaning up...)(62164,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(62164,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(62164,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+PassengerWatchdog (cleaning up...)(62168,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog (cleaning up...)(62168,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog (cleaning up...)(62168,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+App 62170 stdout: 
+App 62170 stderr: env: 
+App 62170 stderr: python: No such file or directory
+App 62170 stdout: 
+[ 2014-05-20 16:01:48.5164 62049/0x1041ba000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:01:48.5166 62049/0x104323000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:11:29.1081 63969/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFncnBhc2EvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1grpasa/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '63968', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 16:11:29.1253 63971/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.63968/generation-0/request
+[ 2014-05-20 16:11:29.1323 63973/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.63968/generation-0/logging
+[ 2014-05-20 16:11:29.1325 63969/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 63992 stdout: 
+App 63992 stderr: env: 
+App 63992 stderr: python: No such file or directory
+App 63992 stdout: 
+[ 2014-05-20 16:11:32.5131 63971/0x105b8c000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:11:32.5133 63971/0x105b06000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:11:32.5295 63971/0x105b06000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 22] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:22:12.3257 66005/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFqMXkyNC90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1j1y24/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '66004', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 16:22:12.3612 66007/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.66004/generation-0/request
+PassengerWatchdog(66010,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(66010,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(66010,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 16:22:12.3817 66009/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.66004/generation-0/logging
+[ 2014-05-20 16:22:12.3820 66005/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 66027 stdout: 
+App 66027 stderr: env: python: No such file or directory
+App 66027 stdout: 
+[ 2014-05-20 16:22:14.8165 66007/0x10dba5000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:22:14.8168 66007/0x10db1f000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:22:14.8432 66007/0x10db1f000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 22] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 66296 stdout: 
+App 66296 stderr: env: 
+App 66296 stderr: python: No such file or directory
+App 66296 stdout: 
+[ 2014-05-20 16:23:09.5396 66007/0x10d9b5000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:23:09.5398 66007/0x10db1f000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:29:00.3069 67962/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmdodjVycy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.ghv5rs/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '67961', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-05-20 16:29:00.3240 67964/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.67961/generation-0/request
+[ 2014-05-20 16:29:00.3310 67966/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.67961/generation-0/logging
+[ 2014-05-20 16:29:00.3313 67962/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 67979 stdout: 
+App 67979 stderr: env: python: No such file or directory
+App 67979 stdout: 
+[ 2014-05-20 16:29:03.0842 67964/0x109d59000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:29:03.0844 67964/0x109cd3000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:29:03.1093 67964/0x109cd3000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 22] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+App 68103 stdout: 
+App 68103 stderr: env: python: No such file or directory
+App 68103 stdout: 
+[ 2014-05-20 16:29:09.3366 67964/0x109b69000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:29:09.3368 67964/0x109cd3000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:33:45.1189 79050/0x7fff7a41c310 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLmdzc211di90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.gssmuv/locations.ini', 'passenger_version' => '4.0.40', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.40', 'web_server_pid' => '79049', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+PassengerWatchdog(79053,0x7fff7a41c310) malloc: *** mach_vm_map(size=8388608) failed (error code=268435459)
+PassengerWatchdog(79053,0x7fff7a41c310) malloc: *** error: can't allocate region securely
+PassengerWatchdog(79053,0x7fff7a41c310) malloc: *** set a breakpoint in malloc_error_break to debug
+[ 2014-05-20 16:33:45.1348 79052/0x7fff7a41c310 agents/HelperAgent/Main.cpp:643 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.79049/generation-0/request
+[ 2014-05-20 16:33:45.1417 79054/0x7fff7a41c310 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.79049/generation-0/logging
+[ 2014-05-20 16:33:45.1419 79050/0x7fff7a41c310 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 79067 stdout: 
+App 79067 stderr: env: python: No such file or directory
+App 79067 stdout: 
+[ 2014-05-20 16:33:47.2834 79052/0x103978000 Pool2/Implementation.cpp:883 ]: Could not spawn process for group /Users/roweandesign/Sites/personal-website#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:455)
+     in 'string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails &)' (SmartSpawner.h:566)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:206)
+     in 'virtual ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options &)' (SmartSpawner.h:752)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const SpawnerPtr &, const Passenger::ApplicationPool2::Options &, unsigned int)' (Implementation.cpp:804)
+
+[ 2014-05-20 16:33:47.2836 79052/0x1038f2000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 21] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+
+[ 2014-05-20 16:33:47.2853 79052/0x1038f2000 agents/HelperAgent/RequestHandler.h:2210 ]: [Client 22] Cannot checkout session.
+Error page:
+<p>It looks like Bundler could not find a gem. Maybe you didn't install all the gems that this application needs. To install your gems, please run:</p>
+
+  <pre class="commands">bundle install</pre>
+
+<p>If that didn't work, then the problem is probably caused by your application being run under a different environment than it's supposed to. Please check the following:</p>
+
+<ol>
+  <li>Is this app supposed to be run as the <code>roweandesign</code> user?</li>
+  <li>Is this app being run on the correct Ruby interpreter? Below you will
+      see which Ruby interpreter Phusion Passenger attempted to use.</li>
+</ol>
+
+<p>-------- The exception is as follows: -------</p>
+Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
+<pre>  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:92:in `block in materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `map!&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/spec_set.rb:85:in `materialize&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup&#39;
+  /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `&lt;top (required)&gt;&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:110:in `rescue in require&#39;
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:35:in `require&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:245:in `block in run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:348:in `running_bundler&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/lib/phusion_passenger/loader_shared_helpers.rb:243:in `run_load_path_setup_code&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:100:in `preload_app&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:158:in `&lt;module:App&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
+  /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
+

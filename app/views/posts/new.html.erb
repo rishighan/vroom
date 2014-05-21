@@ -1,7 +1,7 @@
 <h2>New Post</h2>
 
 
-<%= form_for :posts do |p| %>
+<%= form_for :post, url: posts_path do |p| %>
 
     <p>
         <%= p.label :title %> <br/>
@@ -14,17 +14,17 @@
     </p>
 
     <p>
-    <%= p.label :excerpt %><br/>
-    <%= p.text_area :excerpt %>
+        <%= p.label :excerpt %><br/>
+        <%= p.text_area :excerpt %>
     </p>
 
     <p>
-    <%= p.label :citations %><br/>
-    <%= p.text_area :citations %>
+        <%= p.label :citations %><br/>
+        <%= p.text_area :citations %>
     </p>
 
     <p>
-    <%= p.submit %>
+        <%= p.submit %>
     </p>
 
 

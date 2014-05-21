@@ -4256,3 +4256,7 @@ I, [2014-05-21T10:50:49.830966 #70588]  INFO -- :   Rendered home/index.html.erb
 I, [2014-05-21T10:50:49.831184 #70581]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.2ms)
 I, [2014-05-21T10:50:49.833068 #70588]  INFO -- : Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 0.0ms)
 I, [2014-05-21T10:50:49.833564 #70581]  INFO -- : Completed 200 OK in 38ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+I, [2014-05-21T11:03:01.804469 #70588]  INFO -- : Started GET "/" for 10.224.10.138 at 2014-05-21 11:03:01 -0400
+I, [2014-05-21T11:03:01.822692 #70588]  INFO -- : Processing by HomeController#index as HTML
+I, [2014-05-21T11:03:01.823967 #70588]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.2ms)
+I, [2014-05-21T11:03:01.824670 #70588]  INFO -- : Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)

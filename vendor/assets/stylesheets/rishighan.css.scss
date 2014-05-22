@@ -1,0 +1,46 @@
+// Rishi Ghan
+// Ninth Muse aka 9m
+// May 21 2014
+
+.clear-both {clear:both};
+
+$fallback-sans: Arial, Helvetica, sans-serif;
+$fallback-serif: Georgia, Times New Roman, serif;
+
+$bold: bold;
+
+$gray: #CCC;
+
+@font-face
+    {
+    font-family: Bitter-regular;
+    src: url('fonts/Bitter-Regular.ttf');
+}
+
+
+@font-face
+    {
+    font-family: Bitter-italic;
+    src: url('fonts/Bitter-Italic.ttf');
+    }
+
+
+@font-face
+   {
+    font-family: Bitter-bold;
+    src: url('fonts/Bitter-Bold.ttf');
+}
+
+
+
+
+/* Poetry page */
+.haiku
+    {
+        font-family: Bitter-bold;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        letter-spacing: 0.03em;
+
+    }
+

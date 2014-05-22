@@ -10,3 +10,222 @@ Started GET "/rails/info/properties" for 127.0.0.1 at 2014-03-07 17:45:10 -0500
 Processing by Rails::InfoController#properties as */*
   Rendered /home/rishi/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/templates/rails/info/properties.html.erb (0.3ms)
 Completed 200 OK in 32ms (Views: 17.1ms | ActiveRecord: 1.0ms)
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 15 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 20 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 25 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 33 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 38 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 6 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 13 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 18 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 19 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 23 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 24 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 32 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 36 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 37 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 3 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 7 of /Users/roweandesign/Sites/personal-website/vendor/assets/stylesheets/rishighan.css.sass:
+This selector doesn't have any properties and will not be rendered.
+

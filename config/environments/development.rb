@@ -9,7 +9,13 @@ RishighanCom::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  config.assets.paths << Rails.root.join('app', 'assets', 'images', 'illustrations')
+  config.assets.paths << Rails.root.join('app', 'assets', 'images', 'illustrations', 'fonts')
+  config.assets.raise_runtime_errors = true
+
+  #sass
+  config.sass.preferred_syntax = :sass
+  config.sass.line_comments = false
+  config.sass.cache = false
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true

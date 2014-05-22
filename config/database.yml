@@ -25,8 +25,8 @@ test:
 
 production:
   adapter: postgresql
-  database: rishighan
-  username: rishi
-  password: dexter
+  database: d4cj49grmd882s
+  username: qhcirpfbmlqpvi
+  password: hBuhToYEHW23qVmeOcBIgsJ0bn
   pool: 5
   timeout: 5000

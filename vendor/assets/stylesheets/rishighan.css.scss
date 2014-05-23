@@ -14,21 +14,21 @@ $gray: #CCC;
 @font-face
     {
     font-family: Bitter-regular;
-    src: url('fonts/Bitter-Regular.ttf');
+    src: asset-url('Bitter-Regular.ttf');
 }
 
 
 @font-face
     {
     font-family: Bitter-italic;
-    src: url('fonts/Bitter-Italic.ttf');
+    src: asset-url('Bitter-Italic.ttf');
     }
 
 
 @font-face
    {
     font-family: Bitter-bold;
-    src: url('fonts/Bitter-Bold.ttf');
+    src: asset-url('Bitter-Bold.ttf');
 }
 
 

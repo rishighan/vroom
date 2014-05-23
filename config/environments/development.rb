@@ -9,9 +9,10 @@ RishighanCom::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  config.assets.paths << Rails.root.join('app', 'assets', 'images', 'illustrations', 'fonts')
+  config.assets.paths << Rails.root.join('app', 'assets')
   config.assets.raise_runtime_errors = true
-
+  config.assets.compress = false
+  config.assets.digest = true
   #sass
   config.sass.preferred_syntax = :sass
   config.sass.line_comments = false
@@ -20,6 +21,7 @@ RishighanCom::Application.configure do
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
+
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -33,5 +35,5 @@ RishighanCom::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
 end

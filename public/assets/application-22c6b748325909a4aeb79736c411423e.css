@@ -600,17 +600,17 @@
 
 @font-face {
   font-family: Bitter-regular;
-  src: url("fonts/Bitter-Regular.ttf");
+  src: url(/assets/Bitter-Regular-71cc12adbe1b20bfa7dd97fb577d8110.ttf);
 }
 
 @font-face {
   font-family: Bitter-italic;
-  src: url("fonts/Bitter-Italic.ttf");
+  src: url(/assets/Bitter-Italic-1f65ff3051bd3d9fc392bfe3b83a4c49.ttf);
 }
 
 @font-face {
   font-family: Bitter-bold;
-  src: url("fonts/Bitter-Bold.ttf");
+  src: url(/assets/Bitter-Bold-6784a7a5297bac96fa19591b86efd437.ttf);
 }
 
 /* Poetry page */

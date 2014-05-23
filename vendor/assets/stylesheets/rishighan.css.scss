@@ -4,6 +4,8 @@
 
 .clear-both {clear:both};
 
+// colors
+$error: #ff7f7f;
 $fallback-sans: Arial, Helvetica, sans-serif;
 $fallback-serif: Georgia, Times New Roman, serif;
 
@@ -43,4 +45,10 @@ $gray: #CCC;
         letter-spacing: 0.03em;
 
     }
+
+
+/*  Admin styles */
+.error-explanation{
+    background-color: $error;
+}
 

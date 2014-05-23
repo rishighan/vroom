@@ -1,17 +1,21 @@
 class PostsController < ApplicationController
 
     def new
-
+        @post = Post.new
     end
 
     def index
-        @post = Post.all
+        @posts = Post.all
     end
 
     def create
         @post = Post.new(post_params) #init model with attributes
-        @post.save #save model to db by mapping fields to columns
-        redirect_to @post
+
+        if @post.save #save model to db by mapping fields to columns
+            redirect_to @post
+        else
+            render 'new'
+        end
     end
 
     def show
@@ -22,9 +26,5 @@ class PostsController < ApplicationController
     def post_params
         params.require(:post).permit(:title, :content, :excerpt, :citations)
     end
-
-
-
-
 
 end

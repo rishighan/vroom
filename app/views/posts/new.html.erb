@@ -2,6 +2,16 @@
 
 
 <%= form_for :post, url: posts_path do |p| %>
+<% if @post.errors.any? %>
+<div class="error-explanation">
+<h3><%= pluralize(@post.errors.count, "error")  %> has pervented this post from been saved.</h3>
+<ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+</ul>
+</div>
+<% end %>
 
     <p>
         <%= p.label :title %> <br/>

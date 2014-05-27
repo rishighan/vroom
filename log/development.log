@@ -9794,3 +9794,39 @@ ActionController::RoutingError (No route matches [GET] "/public/assets/brimstone
   Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
   Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
   Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/posts/new" for 10.224.10.138 at 2014-05-27 18:17:07 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.224.10.138 at 2014-05-27 18:38:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.224.10.138 at 2014-05-27 18:38:02 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/" for 10.224.10.138 at 2014-05-27 18:38:06 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (The partial name (admin-nav) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+    1: <% render "admin-nav" %>
+    2: <section>
+    3: 
+    4:  <% @posts.each do |post| %>
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb__3863915591752558883_70155912233840'
+
+
+  Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)

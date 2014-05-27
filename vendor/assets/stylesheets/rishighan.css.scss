@@ -5,7 +5,14 @@
 .clear-both {clear:both};
 
 // colors
+$rg-red: #ff4d45;
+$rg-blue: #6cc5ff;
+
+$rg-admin-navbar: #ff7b38;
 $error: #ff7f7f;
+
+
+
 $fallback-sans: Arial, Helvetica, sans-serif;
 $fallback-serif: Georgia, Times New Roman, serif;
 
@@ -62,6 +69,10 @@ $normal-padding: 10px;
 
 
 /*  Admin styles */
+.admin-nav{
+    background-color: $rg-admin-navbar;
+}
+
 .error-explanation{
     background-color: $error;
     display:block;

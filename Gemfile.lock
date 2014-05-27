@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/vmg/redcarpet.git
+  revision: 96655058f810e2f3eb923acdbdde300e8a69fa29
+  branch: 3-1-branch
+  specs:
+    redcarpet (3.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -118,6 +125,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.3)
   rails_12factor
+  redcarpet!
   sass-rails (~> 4.0.0)
   sdoc
   turbolinks

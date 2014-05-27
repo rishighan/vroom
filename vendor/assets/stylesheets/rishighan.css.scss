@@ -9,9 +9,17 @@ $error: #ff7f7f;
 $fallback-sans: Arial, Helvetica, sans-serif;
 $fallback-serif: Georgia, Times New Roman, serif;
 
-$bold: bold;
+// typography
+$heading: 4em;
+$subheading: 2.472em;
+$subheading2: 0.8em;
+$caption: 0.61803402em;
+
+
 
 $gray: #CCC;
+
+$normal-padding: 10px;
 
 @font-face
     {
@@ -33,6 +41,12 @@ $gray: #CCC;
     src: asset-url('Bitter-Bold.ttf');
 }
 
+/* sans-serif for the poor */
+@font-face
+{
+    font-family: Lato-regular;
+    src: asset-url('Lato-Regular.ttf')
+}
 
 
 
@@ -50,5 +64,14 @@ $gray: #CCC;
 /*  Admin styles */
 .error-explanation{
     background-color: $error;
+    display:block;
+    padding:$normal-padding;
+    font-family: Lato-regular;
+
+
+    h3{
+        font-family: Lato-regular;
+
+    }
 }
 

@@ -620,3 +620,11 @@
   line-height: 1.4em;
   letter-spacing: 0.03em;
 }
+
+/*  Admin styles */
+.error-explanation {
+  background-color: #ff7f7f;
+  display: block;
+  padding: 10px;
+  font-family: Bitter-italic;
+}

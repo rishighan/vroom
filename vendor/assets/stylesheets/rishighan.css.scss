@@ -71,6 +71,17 @@ $normal-padding: 10px;
 /*  Admin styles */
 .admin-nav{
     background-color: $rg-admin-navbar;
+    width:100%;
+    padding:10px;
+
+    ul{
+        list-style:none;
+
+        li{
+            float:left;
+            margin:0 20px 0 0;
+        }
+    }
 }
 
 .error-explanation{
@@ -86,3 +97,11 @@ $normal-padding: 10px;
     }
 }
 
+
+/* Posts admin */
+.posts-admin{
+    h2{
+        font-family: 'Lato-regular';
+        font-size: $subheading;
+    }
+}

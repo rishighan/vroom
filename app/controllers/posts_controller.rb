@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
-
+ layout "admin"
     def new
         @post = Post.new
     end
 
     def index
         @posts = Post.all
+
     end
 
     def create

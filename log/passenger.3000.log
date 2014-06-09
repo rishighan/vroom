@@ -1825,3 +1825,16 @@ Could not find minitest-4.7.5 in any of the sources (Bundler::GemNotFound)
   /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:29:in `&lt;module:PhusionPassenger&gt;&#39;
   /usr/local/Cellar/passenger/4.0.40/libexec/helper-scripts/rack-preloader.rb:28:in `&lt;main&gt;&#39;</pre>
 
+[ 2014-06-05 17:01:52.2328 41760/0x7fff79503300 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFtYmNxb3ovdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/roweandesign/.rvm/gems/ruby-2.1.0/wrappers/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1mbcqoz/locations.ini', 'passenger_version' => '4.0.44', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.44', 'web_server_pid' => '41759', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-06-05 17:01:52.4778 41762/0x7fff79503300 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.41759/generation-0/request
+[ 2014-06-05 17:01:52.5241 41764/0x7fff79503300 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.41759/generation-0/logging
+[ 2014-06-05 17:01:52.5243 41760/0x7fff79503300 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 41784 stdout: 
+App 41784 stderr: /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/config/system_metrics_command.rb:31:in `exec'
+App 41784 stderr: : No such file or directory - /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/buildout/agents/PassengerHelperAgent (Errno::ENOENT)
+App 41784 stderr: 	from /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/config/system_metrics_command.rb:31:in `run'
+App 41784 stderr: 	from /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/config/main.rb:65:in `run!'
+App 41784 stderr: 	from /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/bin/passenger-config:37:in `<main>'
+[ 2014-06-05 17:02:01.5491 41762/0x10bd2d000 Pool2/SmartSpawner.h:297 ]: Preloader for /Users/roweandesign/Sites/personal-website started on PID 41784, listening on unix:/tmp/passenger.1.0.41759/generation-0/backends/preloader.41784
+App 41929 stdout: 
+App 41784 stderr: [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.

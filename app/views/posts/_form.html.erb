@@ -17,17 +17,44 @@
 
     <p>
        <%= p.label :content %> <br/>
-       <%= p.text_area :content %>
+       <%= p.text_area(:content, :size => "90x12") %>
+    </p>
+
+    <p>
+        <div class="md_syntax">
+        <ul>
+            <li> *single asterisks* <em>single asterisks</em></li>
+
+            <li>_single underscores_ <em>single underscores</em> </li>
+
+            <li> **double asterisks** <strong>double asterisks</strong></li>
+
+            <li> __double underscores__ <strong>double underscores</strong></li>
+
+        </ul>
+        <ul>
+            <li> <http://example.com/> </li>
+
+        </ul>
+
+
+
+
+
+
+
+        </div>
+
     </p>
 
     <p>
         <%= p.label :excerpt %><br/>
-        <%= p.text_area :excerpt %>
+        <%= p.text_area(:excerpt, :size => "90x8") %>
     </p>
 
     <p>
         <%= p.label :citations %><br/>
-        <%= p.text_area :citations %>
+        <%= p.text_area(:citations, :size => "90x6") %>
     </p>
 
     <p>

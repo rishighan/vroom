@@ -69,13 +69,17 @@ $normal-padding: 10px;
 
 
 /*  Admin styles */
-.admin-nav{
+.admin-nav-container{
     background-color: $rg-admin-navbar;
     width:100%;
-    padding:10px;
+    height:40px;
+}
 
+.admin-nav{
     ul{
         list-style:none;
+        margin:0 auto;
+        position:relative;
 
         li{
             float:left;
@@ -100,7 +104,7 @@ $normal-padding: 10px;
 
 /* Posts admin */
 .posts-admin{
-    h2{
+    h2, h3, h4{
         font-family: 'Lato-regular';
         font-size: $subheading;
     }

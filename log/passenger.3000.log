@@ -1838,3 +1838,71 @@ App 41784 stderr: 	from /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/passenger-
 [ 2014-06-05 17:02:01.5491 41762/0x10bd2d000 Pool2/SmartSpawner.h:297 ]: Preloader for /Users/roweandesign/Sites/personal-website started on PID 41784, listening on unix:/tmp/passenger.1.0.41759/generation-0/backends/preloader.41784
 App 41929 stdout: 
 App 41784 stderr: [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[ 2014-06-09 13:03:18.4804 73313/0x7fff79dbf300 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'roweandesign', 'cleanup_pidfiles' => 'L3Zhci9mb2xkZXJzL2JfL3gwXzJ3c25qNjJzODVkd3B4bDJsbDZ4MDAwMDBncC9UL3Bhc3Nlbmdlci1zdGFuZGFsb25lLjFsaDEwenkvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'staff', 'default_python' => 'python', 'default_ruby' => '/Users/roweandesign/.rvm/gems/ruby-2.1.0/wrappers/ruby', 'default_user' => 'roweandesign', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/var/folders/b_/x0_2wsnj62s85dwpxl2ll6x00000gp/T/passenger-standalone.1lh10zy/locations.ini', 'passenger_version' => '4.0.44', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.44', 'web_server_pid' => '73312', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-06-09 13:03:18.6164 73315/0x7fff79dbf300 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.73312/generation-0/request
+[ 2014-06-09 13:03:18.6980 73317/0x7fff79dbf300 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.73312/generation-0/logging
+[ 2014-06-09 13:03:18.6982 73313/0x7fff79dbf300 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 73330 stdout: 
+[ 2014-06-09 13:03:25.5938 73315/0x10b5fd000 Pool2/SmartSpawner.h:297 ]: Preloader for /Users/roweandesign/Sites/personal-website started on PID 73330, listening on unix:/tmp/passenger.1.0.73312/generation-0/backends/preloader.73330
+App 73475 stdout: 
+[ 2014-06-09 13:17:12.3405 78076/0x7fff79dbf300 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'root', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5jNDd3OWEvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'wheel', 'default_python' => 'python', 'default_ruby' => '/Users/roweandesign/.rvm/gems/ruby-2.1.0/wrappers/ruby', 'default_user' => 'root', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.c47w9a/locations.ini', 'passenger_version' => '4.0.44', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.44', 'web_server_pid' => '78075', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '0', 'web_server_worker_uid' => '0' }
+[ 2014-06-09 13:17:12.3758 78078/0x7fff79dbf300 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.78075/generation-0/request
+[ 2014-06-09 13:17:12.3843 78080/0x7fff79dbf300 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.78075/generation-0/logging
+[ 2014-06-09 13:17:12.3846 78076/0x7fff79dbf300 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 78095 stdout: 
+[ 2014-06-09 13:17:16.5841 78078/0x101dfb000 Pool2/SmartSpawner.h:297 ]: Preloader for /Users/roweandesign/Sites/personal-website started on PID 78095, listening on unix:/tmp/passenger.1.0.78075/generation-0/backends/preloader.78095
+App 78108 stdout: 
+App 78108 stdout: Started HEAD "/" for 127.0.0.1 at 2014-06-09 13:17:16 -0400
+App 78108 stdout: 
+App 78108 stdout: PG::ConnectionBad (FATAL:  password authentication failed for user "qhcirpfbmlqpvi"
+App 78108 stdout: ):
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `initialize'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `new'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `connect'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:548:in `initialize'
+App 78108 stdout:   activerecord (4.0.3)
+App 78108 stdout:  lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+App 78108 stdout:   /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+App 78108 stdout:   /Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_handling.rb:53:in `connection'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/query_cache.rb:51:in `restore_query_cache_settings'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/query_cache.rb:43:in `rescue in call'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/query_cache.rb:32:in `call'
+App 78108 stdout:   activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4504604150681894657__call__callbacks'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+App 78108 stdout:   railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+App 78108 stdout:   railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+App 78108 stdout:   railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+App 78108 stdout:   rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+App 78108 stdout:   rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+App 78108 stdout:   activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+App 78108 stdout:   actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+App 78108 stdout:   rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+App 78108 stdout:   railties (4.0.3) lib/rails/engine.rb:511:in `call'
+App 78108 stdout:   railties (4.0.3) lib/rails/application.rb:97:in `call'
+App 78108 stdout:   /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+App 78108 stdout:   /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+App 78108 stdout:   /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+App 78108 stdout:   /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+App 78108 stdout: 
+App 78108 stdout: 

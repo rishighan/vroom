@@ -15,14 +15,18 @@ $fallback-sans: Arial, Helvetica, sans-serif;
 $fallback-serif: Georgia, Times New Roman, serif;
 
 // typography
-$heading: 4em;
-$subheading: 2.472em;
-$subheading2: 0.8em;
+$heading: 4em; //h1
+$subheading: 2.472em; //h2
+$subheading2: 0.8em;  //h3
 $caption: 0.61803402em;
 
+$kern: 0.06em;
 
 
-$gray: #CCC;
+// status colors
+$disabled: #CCC;
+$actionitems: #D4D4BE;
+$information: #E8E8AE;
 
 $normal-padding: 10px;
 
@@ -93,6 +97,7 @@ $normal-padding: 10px;
     font-family: Lato-regular;
 
 
+
     h3{
         font-family: Lato-regular;
 
@@ -102,14 +107,22 @@ $normal-padding: 10px;
 
 /* Posts admin */
 .posts-admin{
-    h2, h3, h4{
+    h2, h3, h4, h5{
         font-family: 'Lato-regular';
-        font-size: $subheading;
-    }
+        }
 
-.md_syntax{
-    background: $gray;
-    font-size: $caption;
-}
+    .md-syntax{
+        padding:$normal-padding;
+        background: $information;
+        font-size: $subheading2;
+        letter-spacing: $kern;
+
+        ul li{
+           code{
+            background:$actionitems;
+            padding:2px;
+           }
+         }
+    }
 
 }

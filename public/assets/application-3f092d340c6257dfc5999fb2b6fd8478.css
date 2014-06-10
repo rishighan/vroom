@@ -655,7 +655,16 @@
 }
 
 /* Posts admin */
-.posts-admin h2 {
-  font-family: Lato-regular;
-  font-size: 2.472em;
+.posts-admin h2, .posts-admin h3, .posts-admin h4, .posts-admin h5 {
+  font-family: 'Lato-regular';
+}
+.posts-admin .md-syntax {
+  padding: 10px;
+  background: #e8e8ae;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+}
+.posts-admin .md-syntax ul li code {
+  background: #d4d4be;
+  padding: 2px;
 }

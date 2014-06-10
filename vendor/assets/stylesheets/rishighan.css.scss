@@ -7,7 +7,7 @@
 // colors
 $rg-red: #ff4d45;
 $rg-blue: #6cc5ff;
-$rg-admin-navbar: #F0B262;
+$rg-admin-navbar: #FFFFEC;
 
 // generic
 $black: #000;
@@ -18,7 +18,7 @@ $subtlegray: #FFFFCC;
 // status colors
 $disabled: #CCC;
 $actionitems: #D4D4BE;
-$information: #E8E8AE;
+$information: #FFF0D3;
 $error: #ff7f7f;
 
 $fallback-sans: Arial, Helvetica, sans-serif;
@@ -80,8 +80,9 @@ $normal-padding: 10px;
 /*  Admin styles */
 .admin-nav-container{
     background-color: $rg-admin-navbar;
-    width:100%;
-    height:40px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid $gray;
 }
 
 .admin-nav{
@@ -92,7 +93,16 @@ $normal-padding: 10px;
 
         li{
             float:left;
-            margin:0 20px 0 0;
+            margin:15px 20px 0 0;
+
+            a {
+                color:$black;
+                font-weight:bold;
+                text-decoration:none;
+
+                &:visited{color:$rg-blue;}
+                &:hover{color:$rg-red; text-decoration:underline;}
+            }
         }
     }
 }
@@ -102,6 +112,9 @@ $normal-padding: 10px;
     display:block;
     padding:$normal-padding;
     font-family: Lato-regular;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 
 
 

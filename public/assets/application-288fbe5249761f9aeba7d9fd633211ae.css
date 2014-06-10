@@ -629,9 +629,10 @@
 
 /*  Admin styles */
 .admin-nav-container {
-  background-color: #ff7b38;
+  background-color: #ffffec;
   width: 100%;
-  height: 40px;
+  height: 50px;
+  border-bottom: 1px solid #cccccc;
 }
 
 .admin-nav ul {
@@ -660,11 +661,14 @@
 }
 .posts-admin .md-syntax {
   padding: 10px;
-  background: #e8e8ae;
+  background: #fff0d3;
   font-size: 0.8em;
   letter-spacing: 0.06em;
 }
-.posts-admin .md-syntax code {
-  background: #d4d4be;
-  padding: 2px;
+.posts-admin code {
+  background: #ffffcc;
+  padding: 3px;
+  color: black;
+  font-weight: lighter;
+  border-bottom: 1px solid #999999;
 }

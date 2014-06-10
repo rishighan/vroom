@@ -629,9 +629,10 @@
 
 /*  Admin styles */
 .admin-nav-container {
-  background-color: #f0b262;
+  background-color: #ffffec;
   width: 100%;
-  height: 40px;
+  height: 50px;
+  border-bottom: 1px solid #cccccc;
 }
 
 .admin-nav ul {
@@ -641,7 +642,19 @@
 }
 .admin-nav ul li {
   float: left;
-  margin: 0 20px 0 0;
+  margin: 15px 20px 0 0;
+}
+.admin-nav ul li a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.admin-nav ul li a:visited {
+  color: #6cc5ff;
+}
+.admin-nav ul li a:hover {
+  color: #ff4d45;
+  text-decoration: underline;
 }
 
 .error-explanation {
@@ -649,6 +662,9 @@
   display: block;
   padding: 10px;
   font-family: Lato-regular;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .error-explanation h3 {
   font-family: Lato-regular;
@@ -660,11 +676,14 @@
 }
 .posts-admin .md-syntax {
   padding: 10px;
-  background: #e8e8ae;
+  background: #fff0d3;
   font-size: 0.8em;
   letter-spacing: 0.06em;
 }
 .posts-admin code {
-  background: #d4d4be;
-  padding: 2px;
+  background: #ffffcc;
+  padding: 3px;
+  color: black;
+  font-weight: lighter;
+  border-bottom: 1px solid #999999;
 }

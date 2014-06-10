@@ -7,8 +7,18 @@
 // colors
 $rg-red: #ff4d45;
 $rg-blue: #6cc5ff;
+$rg-admin-navbar: #F0B262;
 
-$rg-admin-navbar: #ff7b38;
+// generic
+$black: #000;
+$lightblack: #999;
+$gray: #CCC;
+$subtlegray: #FFFFCC;
+
+// status colors
+$disabled: #CCC;
+$actionitems: #D4D4BE;
+$information: #E8E8AE;
 $error: #ff7f7f;
 
 $fallback-sans: Arial, Helvetica, sans-serif;
@@ -23,10 +33,7 @@ $caption: 0.61803402em;
 $kern: 0.06em;
 
 
-// status colors
-$disabled: #CCC;
-$actionitems: #D4D4BE;
-$information: #E8E8AE;
+
 
 $normal-padding: 10px;
 
@@ -116,13 +123,16 @@ $normal-padding: 10px;
         background: $information;
         font-size: $subheading2;
         letter-spacing: $kern;
-
-        ul li{
-           code{
-            background:$actionitems;
-            padding:2px;
-           }
-         }
     }
+
+    code{
+        background: $subtlegray;
+        padding: 3px;
+        color: $black;
+        font-weight: lighter;
+        border-bottom: 1px solid $lightblack;
+       }
+
+
 
 }

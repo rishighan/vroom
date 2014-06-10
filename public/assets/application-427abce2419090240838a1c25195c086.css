@@ -631,11 +631,13 @@
 .admin-nav-container {
   background-color: #ff7b38;
   width: 100%;
-  padding: 10px;
+  height: 40px;
 }
 
 .admin-nav ul {
   list-style: none;
+  margin: 0 auto;
+  position: relative;
 }
 .admin-nav ul li {
   float: left;
@@ -653,7 +655,10 @@
 }
 
 /* Posts admin */
-.posts-admin h2 {
+.posts-admin h2, .posts-admin h3, .posts-admin h4 {
   font-family: 'Lato-regular';
   font-size: 2.472em;
+}
+.posts-admin .md_syntax {
+  background: #cccccc;
 }

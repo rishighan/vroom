@@ -14195,3 +14195,470 @@ Processing by PostsController#edit as HTML
   Rendered posts/edit.html.erb within layouts/admin (18.9ms)
   Rendered shared/_admin_nav.html.erb (0.2ms)
 Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-10 18:19:04 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (9.2ms)
+  Rendered posts/new.html.erb within layouts/admin (37.6ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 114ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:51:51 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (239.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (296.6ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 573ms (Views: 124.5ms | ActiveRecord: 284.8ms)
+
+
+Started GET "/posts/9/edit" for 127.0.0.1 at 2014-06-11 10:51:56 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPost Load (57.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "9"]]
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/edit.html.erb within layouts/admin (37.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 68.3ms | ActiveRecord: 57.3ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-06-11 10:52:07 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The first edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/"}, "commit"=>"Save Post"}
+  [1m[36m (26.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.5ms)[0m  INSERT INTO "posts" ("citations", "content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["citations", "http://www.lipsum.com/"], ["content", "\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")"], ["created_at", Wed, 11 Jun 2014 14:52:07 UTC +00:00], ["excerpt", "Author explains the different types of pain."], ["title", "The first edge of the end"], ["updated_at", Wed, 11 Jun 2014 14:52:07 UTC +00:00]]
+  [1m[36m (38.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/10
+Completed 302 Found in 84ms (ActiveRecord: 78.3ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 10:52:07 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:52:15 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:52:21 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/posts/9" for 127.0.0.1 at 2014-06-11 10:52:25 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"9"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:52:25 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 10:55:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (84.4ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fc29b9f3610>:0x007fc29abe0190>):
+    1: <h2>Edit Post</h2>
+    2: 
+    3: <%= form_for :post, url: post_path(post), method: :patch do |p| %>
+    4: <% if @post.errors.any? %>
+    5: <div class="error-explanation">
+    6: <h3><%= pluralize(@post.errors.count, "error")  %> prevented this post from been saved.</h3>
+  app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__3139714697837906001_70236898246800'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 10:55:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (9.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fc29b9f3610>:0x007fc29e280cb8>):
+    1: <h2>Edit Post</h2>
+    2: 
+    3: <%= form_for :post, url: post_path(post), method: :patch do |p| %>
+    4: <% if @post.errors.any? %>
+    5: <div class="error-explanation">
+    6: <h3><%= pluralize(@post.errors.count, "error")  %> prevented this post from been saved.</h3>
+  app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__3139714697837906001_70236926926260'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 10:55:25 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2014-06-11 10:55:42 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The first edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/\r\nhttp://shure.com"}, "commit"=>"Save Post", "id"=>"10"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (102.1ms)[0m  [1mUPDATE "posts" SET "citations" = $1, "updated_at" = $2 WHERE "posts"."id" = 10[0m  [["citations", "http://www.lipsum.com/\r\nhttp://shure.com"], ["updated_at", Wed, 11 Jun 2014 14:55:42 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/10
+Completed 302 Found in 108ms (ActiveRecord: 103.2ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 10:55:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:55:45 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:58:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (24.0ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 94.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 10:58:44 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (367.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (190.7ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 595ms (Views: 225.8ms | ActiveRecord: 367.7ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2014-06-11 10:58:49 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/\r\nhttp://shure.com"}, "commit"=>"Save Post", "id"=>"10"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (57.1ms)[0m  UPDATE "posts" SET "title" = $1, "updated_at" = $2 WHERE "posts"."id" = 10  [["title", "The edge of the end"], ["updated_at", Wed, 11 Jun 2014 14:58:49 UTC +00:00]]
+  [1m[36m (15.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/10
+Completed 302 Found in 78ms (ActiveRecord: 72.9ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 10:58:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.6ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:58:53 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 10:58:54 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2014-06-11 10:58:59 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/\r\n\r\nhttp://shure.com"}, "commit"=>"Save Post", "id"=>"10"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "citations" = $1, "updated_at" = $2 WHERE "posts"."id" = 10[0m  [["citations", "http://www.lipsum.com/\r\n\r\nhttp://shure.com"], ["updated_at", Wed, 11 Jun 2014 14:58:59 UTC +00:00]]
+  [1m[35m (15.9ms)[0m  COMMIT
+Redirected to http://localhost/posts/10
+Completed 302 Found in 21ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 10:59:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:59:02 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 10:59:13 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 10:59:18 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/admin (34.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-06-11 11:00:14 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the century, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (27.0ms)[0m  [1mINSERT INTO "posts" ("citations", "content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["citations", "http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"], ["content", "Now and then, in the course of the century, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor."], ["created_at", Wed, 11 Jun 2014 15:00:14 UTC +00:00], ["excerpt", "The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes."], ["title", "Miniature messages"], ["updated_at", Wed, 11 Jun 2014 15:00:14 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 36ms (ActiveRecord: 28.1ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 11:00:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:00:17 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:01:18 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:01:36 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:02:08 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 11:02:10 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2014-06-11 11:02:14 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"\r\n\r\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/\r\nhttp://shure.com"}, "commit"=>"Save Post", "id"=>"10"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "citations" = $1, "updated_at" = $2 WHERE "posts"."id" = 10[0m  [["citations", "http://www.lipsum.com/\r\nhttp://shure.com"], ["updated_at", Wed, 11 Jun 2014 15:02:14 UTC +00:00]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/10
+Completed 302 Found in 180ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 11:02:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:02:16 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (18.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (19.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 5.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2014-06-11 11:02:25 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2014-06-11 11:02:33 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"The edge of the end", "content"=>"\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"", "excerpt"=>"Author explains the different types of pain.", "citations"=>"http://www.lipsum.com/\r\nhttp://shure.com"}, "commit"=>"Save Post", "id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (33.0ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 10  [["content", "\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.\r\n\r\n Nor again is there *anyone* who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally **circumstances** occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\""], ["updated_at", Wed, 11 Jun 2014 15:02:33 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/10
+Completed 302 Found in 38ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2014-06-11 11:02:33 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:02:35 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:52:49 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/admin (29.0ms)
+Completed 500 Internal Server Error in 90ms
+
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    1:  <h3><%= @post.count%> posts in all.</h3>
+    2:  <% @posts.each do |post| %>
+    3:     <article>
+    4:     <h2> <%= post.title %> </h2>
+  app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___1399628321736118505_70181682425920'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:52:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (27.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (57.2ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 39.2ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:53:02 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:53:33 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:53:51 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 173.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:53:59 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 11:54:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (6.7ms)
+  Rendered posts/new.html.erb within layouts/admin (90.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 173ms (Views: 172.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:54:03 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms)

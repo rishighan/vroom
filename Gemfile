@@ -17,7 +17,7 @@ gem 'paperclip'
 gem 'sass-rails', '~> 4.0.0'
 
 # use redcarpet for parsing markdown
-gem 'redcarpet', :git=>'https://github.com/vmg/redcarpet.git', :branch=>'3-1-branch'
+gem 'redcarpet', github: 'vmg/redcarpet', branch: 'master'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

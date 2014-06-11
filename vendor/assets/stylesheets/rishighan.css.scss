@@ -63,7 +63,10 @@ $normal-padding: 10px;
     src: asset-url('Lato-Regular.ttf')
 }
 
-
+// Global styles
+pre{
+    font-family:monospace;
+}
 
 /* Poetry page */
 .haiku
@@ -147,15 +150,16 @@ $normal-padding: 10px;
         background: $information;
         font-size: $subheading2;
         letter-spacing: $kern;
+             code{
+            background: $subtlegray;
+            padding: 3px;
+            color: $black;
+            font-weight: lighter;
+            border-bottom: 1px solid $lightblack;
+           }
     }
 
-    code{
-        background: $subtlegray;
-        padding: 3px;
-        color: $black;
-        font-weight: lighter;
-        border-bottom: 1px solid $lightblack;
-       }
+
 
        a {
 

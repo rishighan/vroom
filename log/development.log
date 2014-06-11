@@ -14662,3 +14662,1425 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/admin (3.1ms)
   Rendered shared/_admin_nav.html.erb (0.3ms)
 Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 11:56:33 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/new.html.erb within layouts/admin (16.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:56:35 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 11:56:38 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (50.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 31.9ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 11:56:48 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 12:14:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (9.5ms)
+  Rendered posts/new.html.erb within layouts/admin (31.6ms)
+  Rendered shared/_admin_nav.html.erb (4.9ms)
+Completed 200 OK in 154ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:14:03 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (8.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:15:42 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (149.2ms)[0m  [1mSELECT COUNT(post) FROM "posts"[0m
+PG::UndefinedColumn: ERROR:  column "post" does not exist
+LINE 1: SELECT COUNT(post) FROM "posts"
+                     ^
+: SELECT COUNT(post) FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (192.5ms)
+Completed 500 Internal Server Error in 212ms
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "post" does not exist
+LINE 1: SELECT COUNT(post) FROM "posts"
+                     ^
+: SELECT COUNT(post) FROM "posts"):
+    1:  <h2>All posts</h2>
+    2:  <h4><%= pluralize(@posts.count 'post') %> in all</h4>
+    3:  <hr>
+    4:  <% @posts.each do |post| %>
+    5:     <article>
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___1399628321736118505_70181705189200'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:16:05 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/posts/10" for 127.0.0.1 at 2014-06-11 12:16:11 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"10"}
+  [1m[35mPost Load (16.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36m (27.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (123.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 10]]
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts
+Completed 302 Found in 202ms (ActiveRecord: 184.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:16:11 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 12:16:20 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.5ms)
+  Rendered posts/new.html.erb within layouts/admin (27.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-06-11 12:17:42 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the Bishop of Elphin.[4] \r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (70.5ms)[0m  [1mINSERT INTO "posts" ("citations", "content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["citations", "http://en.wikipedia.org/wiki/Lewis_Carroll"], ["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the Bishop of Elphin.[4] \r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson."], ["created_at", Wed, 11 Jun 2014 16:17:42 UTC +00:00], ["excerpt", "Lewis Carroll was a great person."], ["title", "Boomerang bishops"], ["updated_at", Wed, 11 Jun 2014 16:17:42 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 102ms (ActiveRecord: 71.4ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 12:17:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (13.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:17:44 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 12:18:04 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/admin (27.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 12:18:07 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140611162737)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140611162737)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (270.6ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "description" text, "post_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (19.4ms)[0m  CREATE INDEX "index_categories_on_post_id" ON "categories" ("post_id")
+  [1m[36mSQL (61.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140611162737"]]
+  [1m[35m (13.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 12:43:24 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (7.2ms)
+  Rendered posts/new.html.erb within layouts/admin (20.6ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 181ms (Views: 124.0ms | ActiveRecord: 2.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20140611162737)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (89.9ms)[0m  DROP TABLE "categories"
+  [1m[36mSQL (66.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140611162737'[0m
+  [1m[35m (24.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:05:28 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (11.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (68.0ms)
+  Rendered shared/_admin_nav.html.erb (23.8ms)
+Completed 200 OK in 408ms (Views: 109.6ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:12:14 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (47.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (6.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 321ms (Views: 271.9ms | ActiveRecord: 47.8ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:12:45 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"```<div class=\"four columns\">\r\nNow and then, in the course of the century, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n```</div>\r\n\r\n```<div class=\"four columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n```</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (133.6ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "```<div class=\"four columns\">\r\nNow and then, in the course of the century, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n```</div>\r\n\r\n```<div class=\"four columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n```</div>"], ["updated_at", Wed, 11 Jun 2014 17:12:45 UTC +00:00]]
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 162ms (ActiveRecord: 149.4ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:12:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (16.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 11.8ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:12:59 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:13:02 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:16:49 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n"], ["updated_at", Wed, 11 Jun 2014 17:16:49 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:16:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:16:57 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:17:53 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:18:07 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div>\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div>\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n"], ["updated_at", Wed, 11 Jun 2014 17:18:07 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:18:07 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:18:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:18:16 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:18:19 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:18:20 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:18:37 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"four columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (31.0ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "<div class=\"four columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n"], ["updated_at", Wed, 11 Jun 2014 17:18:37 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 35ms (ActiveRecord: 32.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:18:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:20:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (30.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (15.6ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 183ms (Views: 73.5ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:20:39 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (10.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (15.0ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 20.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:20:45 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (216.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 248ms (Views: 246.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"five columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"five columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (74.9ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div class=\"five columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"five columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:21:08 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 83ms (ActiveRecord: 78.2ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:21:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:21:14 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:27 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"six columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"seven columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div class=\"six columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"seven columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:21:27 UTC +00:00]]
+  [1m[36m (60.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 65ms (ActiveRecord: 61.8ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:27 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 162.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:21:31 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:21:33 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:39 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"six columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"six columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div class=\"six columns\">\r\nNow and then, in the course of the `century`, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"six columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:21:39 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:21:39 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:21:41 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:21:50 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:22:01 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:22:04 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:22:20 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"six columns\">\r\nNow and then, in the course of the *century*, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"six columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "<div class=\"six columns\">\r\nNow and then, in the course of the *century*, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</div>\r\n\r\n<div class=\"six columns\">\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. Accordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:22:20 UTC +00:00]]
+  [1m[35m (15.4ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 19ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:22:20 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:22:31 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:22:53 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:23:01 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson."], ["updated_at", Wed, 11 Jun 2014 17:23:01 UTC +00:00]]
+  [1m[35m (16.2ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 21ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:23:02 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:23:04 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:24:00 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (65.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (68.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 293ms (Views: 227.3ms | ActiveRecord: 65.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:24:10 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 170ms (Views: 169.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:24:43 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"six columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n</div>\r\n<div class=\"six columns\">\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (24.9ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "<div class=\"six columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n</div>\r\n<div class=\"six columns\">\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:24:43 UTC +00:00]]
+  [1m[35m (14.3ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 43ms (ActiveRecord: 39.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:24:43 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:24:45 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:24:50 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:25:17 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.0ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:25:18 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:28:10 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (9.3ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:28:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:28:29 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.2ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:28:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:28:48 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:29:10 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:29:39 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:29:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:30:01 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n"], ["updated_at", Wed, 11 Jun 2014 17:30:01 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 29ms (ActiveRecord: 25.5ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:30:01 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (15.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 15.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:30:02 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:31:15 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns\">\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns\">\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson."], ["updated_at", Wed, 11 Jun 2014 17:32:08 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 38ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.3ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:32:15 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (26.8ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (28.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 10.0ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:32:19 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:35 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\"/>\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\"/>\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson."], ["updated_at", Wed, 11 Jun 2014 17:32:35 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:35 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:32:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:32:41 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:55 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\"/>\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\"/>\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson."], ["updated_at", Wed, 11 Jun 2014 17:32:55 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:32:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:33:00 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:33:10 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:33:38 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:33:38 UTC +00:00]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 21ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:33:38 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:33:42 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:35:35 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 13:35:36 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.0ms)
+  Rendered posts/new.html.erb within layouts/admin (15.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:35:39 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:35:54 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:11 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (64.1ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:36:11 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 69ms (ActiveRecord: 65.3ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:36:15 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (25.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (27.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 5.0ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:36:17 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:26 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n<br/>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n<br/>\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (34.9ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n<br/>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n<br/>\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:36:26 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 40ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:36:31 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:36:33 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:41 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n<br/><br/>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<div class=\"twelve columns\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n<br/><br/>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:36:41 UTC +00:00]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 20ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:41 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:36:43 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:36:45 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:54 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<div class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<div class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.[4] \r\n</div>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:36:54 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:36:54 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:36:58 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-11 13:37:05 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-11 13:37:26 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person.", "citations"=>"http://en.wikipedia.org/wiki/Lewis_Carroll"}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:37:26 UTC +00:00]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 19ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-11 13:37:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:37:29 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (16.0ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (18.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 17.8ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:40:20 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:42:42 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<p class=\"twelve columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</p>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<p class=\"twelve columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</p>"], ["updated_at", Wed, 11 Jun 2014 17:42:42 UTC +00:00]]
+  [1m[36m (15.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 20ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:42:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:42:45 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:42:47 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:42:59 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"twelve columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div class=\"twelve columns\">\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:42:59 UTC +00:00]]
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 20ms (ActiveRecord: 16.7ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:42:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:43:01 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 13:43:02 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 13:43:29 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"<div class=\"twelve columns\">\r\n<p>\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</p>\r\n\r\n<p>\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n</p>\r\n\r\n<p>\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</p>\r\n</div>", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "<div class=\"twelve columns\">\r\n<p>\r\nNow and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n</p>\r\n\r\n<p>\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n</p>\r\n\r\n<p>\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n</p>\r\n</div>"], ["updated_at", Wed, 11 Jun 2014 17:43:29 UTC +00:00]]
+  [1m[36m (44.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 49ms (ActiveRecord: 45.8ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 13:43:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (39.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 179ms (Views: 138.5ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:43:32 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.3ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:44:00 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:44:07 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:44:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:45:29 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:45:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.8ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 176ms (Views: 86.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:46:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (30.1ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 144ms (Views: 93.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:47:00 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:47:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (29.3ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 144ms (Views: 93.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:48:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (13.1ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 26.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:49:03 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:50:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (14.4ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 28.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:50:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (12.2ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 24.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:52:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.4ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 166ms (Views: 94.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:52:30 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:52:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (13.8ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 25.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:53:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.6ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 258ms (Views: 186.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:54:39 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 168ms (Views: 166.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:55:33 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 13:55:52 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)

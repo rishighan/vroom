@@ -311,7 +311,7 @@
 
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
-    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .container .columns                         { float: left; display: inline; /*margin-left: 10px; margin-right: 10px; */ }
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
@@ -645,13 +645,16 @@
   margin: 15px 20px 0 0;
 }
 .admin-nav ul li a {
-  color: #6cc5ff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 .admin-nav ul li a:visited {
   color: #6cc5ff;
 }
 .admin-nav ul li a:hover {
   color: #ff4d45;
+  text-decoration: underline;
 }
 
 .error-explanation {
@@ -659,6 +662,9 @@
   display: block;
   padding: 10px;
   font-family: Lato-regular;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .error-explanation h3 {
   font-family: Lato-regular;
@@ -667,6 +673,15 @@
 /* Posts admin */
 .posts-admin h2, .posts-admin h3, .posts-admin h4, .posts-admin h5 {
   font-family: 'Lato-regular';
+}
+.posts-admin article {
+  margin: 0 0 0 0px;
+}
+.posts-admin article div {
+  margin: 0 0 0 0;
+}
+.posts-admin article img {
+  margin: 0 20px 0 0;
 }
 .posts-admin .md-syntax {
   padding: 10px;
@@ -680,4 +695,15 @@
   color: black;
   font-weight: lighter;
   border-bottom: 1px solid #999999;
+}
+.posts-admin a {
+  color: #d4d4be;
+  text-decoration: none;
+}
+.posts-admin a:visited {
+  color: black;
+}
+.posts-admin a:hover {
+  text-decoration: underline;
+  color: black;
 }

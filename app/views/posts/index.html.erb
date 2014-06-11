@@ -1,15 +1,16 @@
  <h2>All posts</h2>
- <h4><%= @posts.count%> posts in all</h4>
+ <h4><%= pluralize(@posts.count, 'post') %> in all</h4>
  <hr>
+
  <% @posts.each do |post| %>
-    <article>
+    <article class="clearfix ">
     <h2> <%= post.title %> </h2>
     <p>
         <%= markdown(post.content) %>
-        <small><%= markdown(post.citations) %> </small>
-    </p>
 
+    </p>
     </article>
+     <small><%= markdown(post.citations) %> </small>
     <%= link_to "Edit Post", edit_post_path(post) %> |
     <%= link_to "Destroy", post_path(post), method: :delete, data: {confirm: "Delete Post?"} %>
     <hr>

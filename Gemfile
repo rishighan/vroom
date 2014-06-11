@@ -10,6 +10,9 @@ gem 'rails', '4.0.3'
 # but we are going with Postgres, so
 gem 'pg'
 
+#attachments
+gem 'paperclip'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

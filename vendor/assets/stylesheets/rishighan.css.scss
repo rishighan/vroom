@@ -130,6 +130,18 @@ $normal-padding: 10px;
         font-family: 'Lato-regular';
         }
 
+    article{
+        margin:0 0 0 0px;
+
+        div{
+            margin:0 0 0 0;
+        }
+
+        img{
+            margin:0 20px 0 0;
+        }
+    }
+
     .md-syntax{
         padding:$normal-padding;
         background: $information;

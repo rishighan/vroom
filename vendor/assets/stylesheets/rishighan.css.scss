@@ -65,6 +65,12 @@ $normal-padding: 10px;
     src: asset-url('Lato-Regular.ttf')
 }
 
+@font-face
+{
+    font-family: Muli-regular;
+    src: asset-url('Muli-Regular.ttf')
+}
+
 /* Poetry page */
 .haiku
     {
@@ -150,7 +156,10 @@ $normal-padding: 10px;
 
             margin:0;
 
-            p {margin:0;}
+            p {
+                margin:0;
+                font-family:'Muli-regular';
+            }
         }
 
 

@@ -221,8 +221,8 @@
   color: #f92672;
 }
 .highlight {
-  color: #f8f8f2;
-  background-color: #49483e;
+  color: #993;
+  /*background-color: #49483e*/;
 }
 /*
 * Skeleton V1.2
@@ -251,7 +251,7 @@
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,  a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,  a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -828,6 +828,11 @@
   src: url(/assets/Lato-Regular-ecf28cd8ee4fa480ef11a0f796158a9d.ttf);
 }
 
+@font-face {
+  font-family: Muli-regular;
+  src: url(/assets/Muli-Regular-ae912b4feaf1281fc7c82e063333a4bb.ttf);
+}
+
 /* Poetry page */
 .haiku {
   font-family: Bitter-bold;
@@ -892,6 +897,17 @@
 .posts-admin article {
   margin: 0 0 20px 0px;
   padding: 10px;
+  border-left: 1px solid #ffffcc;
+}
+.posts-admin article:hover {
+  border-left: 1px solid #cccccc;
+}
+.posts-admin article ol li {
+  margin: 0;
+}
+.posts-admin article ol li p {
+  margin: 0;
+  font-family: 'Muli-regular';
 }
 .posts-admin article div {
   margin: 0 0 0 0;

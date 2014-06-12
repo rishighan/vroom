@@ -18014,3 +18014,1144 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/admin (6.5ms)
   Rendered shared/_admin_nav.html.erb (0.7ms)
 Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:05:21 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (5.1ms)
+  Rendered posts/new.html.erb within layouts/admin (6.7ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:05:21 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 12:10:03 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 90.3ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 12:10:20 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n~~~ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n~~~\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (63.4ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n~~~ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n~~~\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 16:10:20 UTC +00:00]]
+  [1m[35m (19.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 90ms (ActiveRecord: 83.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 12:10:20 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.9ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:10:24 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 12:16:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (4.7ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 413ms (Views: 410.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 12:16:56 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 16:16:56 UTC +00:00]]
+  [1m[35m (22.0ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 27ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 12:16:56 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:17:00 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:24:12 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (116.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (234.4ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 451ms (Views: 208.7ms | ActiveRecord: 215.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:24:16 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 475ms (Views: 474.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:26:35 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (5224.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (364.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (5613.7ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 6188ms (Views: 584.9ms | ActiveRecord: 5588.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:26:42 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:27:04 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (5.3ms)
+  Rendered posts/new.html.erb within layouts/admin (95.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 166ms (Views: 165.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:29:10 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (208.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (297.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 608ms (Views: 399.0ms | ActiveRecord: 208.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:29:20 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 695ms (Views: 693.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:29:52 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 12:30:31 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (473.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 1042ms (Views: 566.9ms | ActiveRecord: 473.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:31:19 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 170.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:49:30 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (11.0ms)
+  Rendered posts/new.html.erb within layouts/admin (53.2ms)
+  Rendered shared/_admin_nav.html.erb (2.0ms)
+Completed 200 OK in 184ms (Views: 177.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:49:49 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (424.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (39.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (518.7ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 533ms (Views: 68.5ms | ActiveRecord: 463.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:56:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (16.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (18.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (237.7ms)
+Completed 500 Internal Server Error in 380ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:36:in `render'
+  app/helpers/application_helper.rb:36:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:57:00 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (11.1ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:4:in `block_code'
+  app/helpers/application_helper.rb:19:in `render'
+  app/helpers/application_helper.rb:19:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:57:02 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:4:in `block_code'
+  app/helpers/application_helper.rb:19:in `render'
+  app/helpers/application_helper.rb:19:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2584325350210346352_70328095680020'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:57:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (55.8ms)
+Completed 500 Internal Server Error in 178ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:4:in `block_code'
+  app/helpers/application_helper.rb:19:in `render'
+  app/helpers/application_helper.rb:19:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:30 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (9.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:32 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2846640177080883589_70216178279300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (73.2ms)
+Completed 500 Internal Server Error in 135ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:55 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (9.4ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:58:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1561205995611103548_70238727962700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:59:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (58.5ms)
+Completed 500 Internal Server Error in 131ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:7:in `block_code'
+  app/helpers/application_helper.rb:31:in `render'
+  app/helpers/application_helper.rb:31:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb__524387724920462081_70124751159460'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__524387724920462081_70124751159460'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:59:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+RuntimeError (Circular dependency detected while autoloading constant ApplicationHelper):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:00:20 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (33.1ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:5:in `block_code'
+  app/helpers/application_helper.rb:21:in `render'
+  app/helpers/application_helper.rb:21:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151898431300'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151898431300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:00:55 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (16.5ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(@post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(@post.citations) %> </small>
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151889286660'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151889286660'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:01:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `content' for #<ActiveRecord::Relation::ActiveRecord_Relation_Post:0x007f9b04c7efd8>):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(@posts.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(@posts.citations) %> </small>
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151888431500'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151888431500'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:02:03 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:5:in `block_code'
+  app/helpers/application_helper.rb:21:in `render'
+  app/helpers/application_helper.rb:21:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:02:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (14.1ms)
+Completed 500 Internal Server Error in 92ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:5:in `block_code'
+  app/helpers/application_helper.rb:22:in `render'
+  app/helpers/application_helper.rb:22:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:02:57 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+     6:     <article class="clearfix <%= cycle('even', 'odd') %>">
+     7:     <h2> <%= post.title %> </h2>
+     8:     <p>
+     9:         <%= markdown(post.content) %>
+    10: 
+    11:     </p>
+    12:       <small><%= markdown(post.citations) %> </small>
+  app/helpers/application_helper.rb:5:in `block_code'
+  app/helpers/application_helper.rb:22:in `render'
+  app/helpers/application_helper.rb:22:in `markdown'
+  app/views/posts/index.html.erb:9:in `block in _app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+  app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___1907370175214343736_70151887581220'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:04:03 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (73.7ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 129ms (Views: 100.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:04:19 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (84.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (187.1ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 324ms (Views: 237.6ms | ActiveRecord: 85.1ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:04:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (8.9ms)[0m  BEGIN
+  [1m[36mSQL (147.2ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 17:04:24 UTC +00:00]]
+  [1m[35m (46.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 209ms (ActiveRecord: 203.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:04:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (39.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:04:32 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:04:48 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (12.4ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 12.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:04:57 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:05:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:05:23 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 13:05:26 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/admin (4.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:05:36 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:05:53 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:05:59 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\n\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\n\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 17:05:59 UTC +00:00]]
+  [1m[36m (71.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 76ms (ActiveRecord: 72.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:05:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:06:04 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:06:13 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:06:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (33.8ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 17:06:24 UTC +00:00]]
+  [1m[36m (14.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 53ms (ActiveRecord: 49.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:06:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:06:27 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:11:48 -0400
+
+LoadError (No such file to load -- rouge):
+  app/helpers/application_helper.rb:2:in `<top (required)>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:12:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (29.4ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 150ms (Views: 86.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:13:44 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:14:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (31.7ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 233ms (Views: 118.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:20:06 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (2.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (17.9ms)
+  Rendered shared/_admin_nav.html.erb (1.7ms)
+Completed 200 OK in 96ms (Views: 88.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:20:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (30.1ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 151ms (Views: 94.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:21:18 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (141.5ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 159ms (Views: 156.1ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:22:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [link](http://google.com\"shankar Shanti\")", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (77.4ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [link](http://google.com\"shankar Shanti\")"], ["updated_at", Thu, 12 Jun 2014 17:22:08 UTC +00:00]]
+  [1m[35m (12.2ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 97ms (ActiveRecord: 90.4ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:22:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:22:14 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:22:26 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:22:53 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be the link]](http://google.com \"shankar Shanti\")", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be the link]](http://google.com \"shankar Shanti\")"], ["updated_at", Thu, 12 Jun 2014 17:22:53 UTC +00:00]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 21ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:22:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:25:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (18.0ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 279ms (Views: 105.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:26:15 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (6.2ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 13:26:21 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (243.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 358ms (Views: 355.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 13:26:39 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be the link](http://google.com \"shankar Shanti\")", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (37.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be the link](http://google.com \"shankar Shanti\")"], ["updated_at", Thu, 12 Jun 2014 17:26:39 UTC +00:00]]
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 68ms (ActiveRecord: 62.9ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 13:26:40 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 158.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-12 13:27:05 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.6ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:28:03 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:35:48 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 168ms (Views: 166.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:39:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.5ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:39:42 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:39:44 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:39:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (22.5ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 93ms (Views: 46.3ms | ActiveRecord: 3.0ms)

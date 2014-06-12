@@ -143,6 +143,15 @@ $normal-padding: 10px;
         margin:0 0 20px 0px;
         padding:$normal-padding;
 
+        // footnotes
+        ol li {
+
+            margin:0;
+
+            p {margin:0;}
+        }
+
+
         div{
             margin:0 0 0 0;
         }

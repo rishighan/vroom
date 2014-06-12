@@ -13,6 +13,9 @@ gem 'pg'
 #attachments
 gem 'paperclip'
 
+#file uploads
+gem "jquery-fileupload-rails"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

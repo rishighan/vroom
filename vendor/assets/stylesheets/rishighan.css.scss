@@ -142,6 +142,8 @@ $normal-padding: 10px;
     article{
         margin:0 0 20px 0px;
         padding:$normal-padding;
+        border-left: 1px solid $subtlegray;
+        &:hover {border-left:1px solid $gray;}
 
         // footnotes
         ol li {
@@ -166,13 +168,13 @@ $normal-padding: 10px;
         background: $information;
         font-size: $subheading2;
 
-        code{
-            background: $subtlegray;
-            padding: 1px;
-            color: $black;
-            font-weight: lighter;
-            border-bottom: 1px solid $lightblack;
-           }
+            code{
+                background: $subtlegray;
+                padding: 1px;
+                color: $black;
+                font-weight: lighter;
+                border-bottom: 1px solid $lightblack;
+               }
     }
 
 

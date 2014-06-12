@@ -19198,3 +19198,836 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/admin (21.7ms)
   Rendered shared/_admin_nav.html.erb (0.9ms)
 Completed 200 OK in 208ms (Views: 178.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 15:07:57 -0400
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 15:07:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (21.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (20.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 15:07:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+Processing by PostsController#new as HTML
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (144.3ms)
+  Rendered posts/_form.html.erb (144.3ms)
+  Rendered posts/new.html.erb within layouts/admin (179.1ms)
+  Rendered posts/new.html.erb within layouts/admin (179.1ms)
+  Rendered posts/_form.html.erb (146.3ms)
+  Rendered posts/new.html.erb within layouts/admin (181.1ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 366ms (Views: 259.8ms | ActiveRecord: 3.0ms)
+Completed 200 OK in 366ms (Views: 259.9ms | ActiveRecord: 3.0ms)
+Completed 200 OK in 366ms (Views: 259.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:08:25 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (41.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 15:08:32 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/new.html.erb within layouts/admin (23.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:08:35 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:09:50 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.4ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:10:07 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (58.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 29.7ms | ActiveRecord: 58.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:10:33 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```css\r\n\r\n        code{\r\n            background: $subtlegray;\r\n            padding: 1px;\r\n            color: $black;\r\n            font-weight: lighter;\r\n            border-bottom: 1px solid $lightblack;\r\n           }\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (108.8ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```css\r\n\r\n        code{\r\n            background: $subtlegray;\r\n            padding: 1px;\r\n            color: $black;\r\n            font-weight: lighter;\r\n            border-bottom: 1px solid $lightblack;\r\n           }\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Thu, 12 Jun 2014 19:10:33 UTC +00:00]]
+  [1m[35m (13.3ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 129ms (ActiveRecord: 122.8ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:10:33 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:10:43 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:10:57 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:11:36 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li> <code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li> <code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li> <code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li> <code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Thu, 12 Jun 2014 19:11:36 UTC +00:00]]
+  [1m[35m (25.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 31ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:11:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:11:40 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:11:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:11:51 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Thu, 12 Jun 2014 19:11:51 UTC +00:00]]
+  [1m[35m (16.2ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 20ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:11:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:11:54 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:12:04 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:13:20 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"five columns\"/>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Thu, 12 Jun 2014 19:13:20 UTC +00:00]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 20ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:13:20 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:13:22 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (5.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:14:46 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:15:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n![here be image](http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg)\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (31.5ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n![here be image](http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg)\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>"], ["updated_at", Thu, 12 Jun 2014 19:15:24 UTC +00:00]]
+  [1m[35m (17.2ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 54ms (ActiveRecord: 49.2ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:15:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (99.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 222ms (Views: 122.4ms | ActiveRecord: 99.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:15:30 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:15:33 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:06 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n![here be image](http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg)\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n<div class=\"seven columns\">\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n</div>", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 39ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.8ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:21:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:21:24 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:31 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n![here be image](http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg)\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n![here be image](http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg)\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:21:31 UTC +00:00]]
+  [1m[36m (14.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 19ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:31 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:21:35 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:21:38 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:59 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "<p class=\"twelve columns clearfix\">\r\nDodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n</p>\r\n\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:21:59 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:21:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:22:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.7ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:22:14 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:22:34 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:22:34 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:22:34 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:22:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 15:22:41 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:22:44 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (5.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:22:46 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:23:00 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n<p>\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n</p>\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n<p>\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n</p>\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:23:00 UTC +00:00]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 19ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:23:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:23:09 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:23:12 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:23:35 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n<br/>\r\n<br/>\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n<br/>\r\n<br/>\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12[0m  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n<br/>\r\n<br/>\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n<br/>\r\n<br/>\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:23:35 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:23:35 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:23:40 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 15:23:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (2.3ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:23:55 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:23:59 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:07 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\n```\r\nsomething\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:24:07 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:07 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (1.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:24:14 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:24:16 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:37 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p>\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns clearfix\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:24:37 UTC +00:00]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 20ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:24:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2014-06-12 15:24:42 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  Rendered posts/edit.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:55 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Boomerang bishops", "content"=>"Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p class=\"clearfix\">\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n", "excerpt"=>"Lewis Carroll was a great person."}, "commit"=>"Save Post", "id"=>"12"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 12  [["content", "Dodgson's family was predominantly northern English, with Irish connections. Conservative and High Church Anglican, most of Dodgson's ancestors were army officers or Church of England clergy. His great-grandfather, also named Charles Dodgson, had risen through the ranks of the church to become the <code>Bishop</code> of Elphin.\r\n\r\n<p class=\"clearfix\">\r\n<img src=\"http://foodcracks.com/wp-content/uploads/2014/04/Muffin.jpg\" class=\"twelve columns\" />\r\n</p>\r\n\r\n```html\r\n <li><code>**double asterisks**</code> <strong>bold</strong></li>\r\n <li><code>#This is an H1</code> </li>\r\n <li><code>## This is an H2</code></li>\r\n```\r\n\r\nHis paternal grandfather, another Charles, had been an army captain, killed in action in Ireland in 1803 when his two sons were hardly more than babies.[5] The oldest of these sons – yet another Charles Dodgson – was Carroll's father. He reverted to the other family tradition and took holy orders. He went to Westminster School, and then to Christ Church, Oxford. He was mathematically gifted and won a double first degree, which could have been the prelude to a brilliant academic career. Instead he married his first cousin, Frances Jane Lutwidge,[6] in 1827 and became a country parson.\r\n"], ["updated_at", Thu, 12 Jun 2014 19:24:55 UTC +00:00]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/12
+Completed 302 Found in 20ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2014-06-12 15:24:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered posts/show.html.erb within layouts/admin (0.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:25:03 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.7ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:25:34 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 15:26:32 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.0ms)
+  Rendered posts/new.html.erb within layouts/admin (11.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:26:35 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 16:16:57 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (38.3ms)
+  Rendered posts/new.html.erb within layouts/admin (58.5ms)
+  Rendered shared/_admin_nav.html.erb (2.2ms)
+Completed 200 OK in 150ms (Views: 141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 16:50:53 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (60.3ms)
+  Rendered posts/new.html.erb within layouts/admin (122.0ms)
+  Rendered shared/_admin_nav.html.erb (2.0ms)
+Completed 200 OK in 275ms (Views: 267.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 16:50:53 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (1232.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (32.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1275.8ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 1296ms (Views: 30.5ms | ActiveRecord: 1264.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 16:51:03 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (60.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 47.6ms | ActiveRecord: 60.9ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 16:51:12 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be a link](http://google.com \"shankar Shanti\")", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes."}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (42.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (164.3ms)[0m  UPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions[^2]. \r\n\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n    validates :title, presence: true, length: {minimum: 5}\r\n    has_and_belongs_to_many :categories\r\n    accepts_nested_attributes_for :categories\r\nend\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.\r\n[^2]: [This be a link](http://google.com \"shankar Shanti\")"], ["updated_at", Thu, 12 Jun 2014 20:51:13 UTC +00:00]]
+  [1m[36m (19.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/11
+Completed 302 Found in 238ms (ActiveRecord: 226.9ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 16:51:13 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (1.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 16:51:16 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 16:55:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/admin (47.9ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 164ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 16:58:12 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.1ms)
+  Rendered posts/new.html.erb within layouts/admin (23.3ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 16:58:14 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:04:00 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (5.2ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:04:33 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:04:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (46.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (168.0ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 560ms (Views: 283.1ms | ActiveRecord: 132.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:05:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (31.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (53.6ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 266ms (Views: 169.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:09:14 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:09:27 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.7ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:09:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 17:24:29 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (1270.8ms)
+  Rendered posts/new.html.erb within layouts/admin (1273.1ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 1364ms (Views: 1362.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 17:38:47 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/new.html.erb within layouts/admin (32.0ms)
+  Rendered shared/_admin_nav.html.erb (1.5ms)
+Completed 200 OK in 95ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 17:38:47 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (15.7ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 2.4ms)

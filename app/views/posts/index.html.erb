@@ -1,6 +1,7 @@
- <h2>All posts</h2>
+<p>
+ <h2>Showing all posts</h2>
  <h4><%= pluralize(@posts.count, 'post') %> in all</h4>
- <hr>
+</p>
 
  <% @posts.each do |post| %>
     <article class="clearfix <%= cycle('even', 'odd') %>">

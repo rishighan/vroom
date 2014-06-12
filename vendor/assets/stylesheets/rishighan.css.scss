@@ -15,6 +15,8 @@ $black: #000;
 $lightblack: #999;
 $gray: #CCC;
 $subtlegray: #FFFFCC;
+$beige: #FFFEF1;
+$loconbeige: #FFFFEB;
 
 // status colors
 $disabled: #CCC;
@@ -61,11 +63,6 @@ $normal-padding: 10px;
 {
     font-family: Lato-regular;
     src: asset-url('Lato-Regular.ttf')
-}
-
-// Global styles
-pre{
-    font-family:monospace;
 }
 
 /* Poetry page */
@@ -133,8 +130,18 @@ pre{
         font-family: 'Lato-regular';
         }
 
+     // zebra-stripes
+        .even{
+            background:$beige;
+        }
+
+        .odd{
+            background:$loconbeige;
+        }
+
     article{
-        margin:0 0 0 0px;
+        margin:0 0 20px 0px;
+        padding:$normal-padding;
 
         div{
             margin:0 0 0 0;
@@ -149,10 +156,10 @@ pre{
         padding:$normal-padding;
         background: $information;
         font-size: $subheading2;
-        letter-spacing: $kern;
-             code{
+
+        code{
             background: $subtlegray;
-            padding: 3px;
+            padding: 1px;
             color: $black;
             font-weight: lighter;
             border-bottom: 1px solid $lightblack;

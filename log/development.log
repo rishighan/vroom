@@ -17184,3 +17184,833 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (768.3ms)
   Rendered shared/_admin_nav.html.erb (0.3ms)
 Completed 200 OK in 812ms (Views: 811.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:15:29 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:15:42 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-11 17:15:43 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.3ms)
+  Rendered posts/new.html.erb within layouts/admin (14.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:15:46 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-11 17:17:29 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (77.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 62.3ms | ActiveRecord: 77.7ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-11 17:17:45 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n<p>This is a footnote.[^1]</p>\r\n<p>[^1]: It provides additional information.</p>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n\r\n[^1] footnotery", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (43.6ms)[0m  BEGIN
+  [1m[36mSQL (1048.0ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n<p>This is a footnote.[^1]</p>\r\n<p>[^1]: It provides additional information.</p>\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n\r\n[^1] footnotery"], ["updated_at", Wed, 11 Jun 2014 21:17:45 UTC +00:00]]
+  [1m[35m (77.7ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 1176ms (ActiveRecord: 1169.8ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-11 17:17:46 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:17:54 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:19:48 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:19:51 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-11 17:20:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (22.2ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 103ms (Views: 53.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 10:26:51 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (565.6ms)
+  Rendered posts/new.html.erb within layouts/admin (608.1ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 683ms (Views: 673.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:26:55 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (249.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (266.9ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 287ms (Views: 35.9ms | ActiveRecord: 251.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:35:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (20.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (46.2ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 183ms (Views: 117.2ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:36:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (84.3ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 342ms (Views: 277.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:37:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (21.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.2ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 143ms (Views: 94.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:38:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (67.1ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 310ms (Views: 219.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:41:50 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (9.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 203ms (Views: 132.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:44:37 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (9.8ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 78ms (Views: 49.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:44:40 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:44:46 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:44:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (59.5ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 183ms (Views: 113.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 10:45:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (146.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (132.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 308ms (Views: 159.1ms | ActiveRecord: 146.7ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 10:45:15 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThis is a footnote.[^1]\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n\r\n[^1] footnotery", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (9.0ms)[0m  BEGIN
+  [1m[36mSQL (195.1ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThis is a footnote.[^1]\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n\r\n[^1] footnotery"], ["updated_at", Thu, 12 Jun 2014 14:45:15 UTC +00:00]]
+  [1m[35m (25.9ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 237ms (ActiveRecord: 230.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:45:15 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:45:35 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 10:45:41 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 10:45:51 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThis is a footnote.[^1]\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThis is a footnote.[^1]\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation. [^1] It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor."], ["updated_at", Thu, 12 Jun 2014 14:45:51 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:45:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:46:00 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 10:46:01 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 10:46:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\n[^1]: It provides additional information.\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor."], ["updated_at", Thu, 12 Jun 2014 14:46:24 UTC +00:00]]
+  [1m[35m (35.9ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 40ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:46:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:46:38 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 10:46:39 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 10:46:51 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (45.3ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation[^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor."], ["updated_at", Thu, 12 Jun 2014 14:46:51 UTC +00:00]]
+  [1m[35m (31.4ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 80ms (ActiveRecord: 77.2ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:46:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:46:57 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 10:46:59 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 10:47:09 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 14:47:09 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:47:10 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:47:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.3ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 41.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:48:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 10:48:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (9.5ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 139ms (Views: 50.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:48:23 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.7ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:49:54 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (18.1ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 100ms (Views: 62.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 10:50:09 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (11.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:12:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (30.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (89.1ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 491ms (Views: 377.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:16:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (44.9ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 191ms (Views: 127.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:18:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.2ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 158ms (Views: 95.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:18:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (11.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 57.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:26:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (34.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (38.9ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 451ms (Views: 270.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:38:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.0ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 252ms (Views: 103.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:38:25 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:39:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (45.1ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 216ms (Views: 144.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:45:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (29.5ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 152ms (Views: 86.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:45:40 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:45:54 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:46:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.4ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 142ms (Views: 77.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 11:47:13 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (88.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (151.4ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 269ms (Views: 178.8ms | ActiveRecord: 88.5ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 11:47:20 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (31.6ms)[0m  BEGIN
+  [1m[36mSQL (787.6ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 15:47:20 UTC +00:00]]
+  [1m[35m (96.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 943ms (ActiveRecord: 916.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:47:21 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (75.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 122ms (Views: 46.4ms | ActiveRecord: 75.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:47:24 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (7.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 11:47:35 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 11:47:40 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 15:47:40 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:47:40 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:47:43 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts?parent=javascript" for 127.0.0.1 at 2014-06-12 11:55:44 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"parent"=>"javascript"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (15.7ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 72.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts?parent=ruby" for 127.0.0.1 at 2014-06-12 11:56:07 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"parent"=>"ruby"}
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 11:56:15 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (5.7ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 120ms (Views: 118.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 11:56:21 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.8ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```ruby\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 15:56:21 UTC +00:00]]
+  [1m[35m (42.3ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 52ms (ActiveRecord: 46.7ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:56:21 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:56:24 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 11:56:26 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (3.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 11:56:32 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```python\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n```python\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n```\r\n\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 15:56:32 UTC +00:00]]
+  [1m[35m (41.0ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 46ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:56:32 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:57:16 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (4.0ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-12 11:57:18 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (4.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2014-06-12 11:57:32 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"Miniature messages", "content"=>"Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n~~~python\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n~~~\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information.", "excerpt"=>"The chief advantage that would result from the establishment of Socialism is, undoubtedly, the fact that Socialism would relieve us from that sordid necessity of living for others which, in the present condition of things, presses so hardly upon almost everybody. In fact, scarcely anyone at all escapes.", "citations"=>"http://www.marxists.org/reference/archive/wilde-oscar/soul-man/"}, "commit"=>"Save Post", "id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "posts" SET "content" = $1, "updated_at" = $2 WHERE "posts"."id" = 11[0m  [["content", "Now and then, in the course of the <strong>century</strong>, a great man of science, like Darwin; a great poet, like Keats; a fine critical spirit, like M. Renan; a supreme artist, like Flaubert, has been able to isolate himself, to keep himself out of reach of the clamorous claims of others, to stand ‘under the shelter of the wall,’ as Plato puts it, and so to realise the perfection of what was in him, to his own incomparable gain, and to the incomparable and lasting gain of the whole world. These, however, are exceptions. \r\n\r\n\r\n~~~python\r\nrequire 'redcarpet'\r\nmarkdown = Redcarpet.new(\"Hello World!\")\r\nputs markdown.to_html\r\n~~~\r\n\r\nThe majority of people spoil their lives by an unhealthy and exaggerated altruism – are forced, indeed, so to spoil them. They find themselves surrounded by hideous poverty, by hideous ugliness, by hideous starvation [^1]. It is inevitable that they should be strongly moved by all this. The emotions of man are stirred more quickly than man’s intelligence; and, as I pointed out some time ago in an article on the function of criticism, it is much more easy to have sympathy with suffering than it is to have sympathy with thought. \r\n\r\nAccordingly, with admirable, though misdirected intentions, they very seriously and very sentimentally set themselves to the task of remedying the evils that they see. But their remedies do not cure the disease: they merely prolong it. Indeed, their remedies are part of the disease.\r\n\r\nThey try to solve the problem of poverty, for instance, by keeping the poor alive; or, in the case of a very advanced school, by amusing the poor.\r\n\r\n[^1]: It provides additional information."], ["updated_at", Thu, 12 Jun 2014 15:57:32 UTC +00:00]]
+  [1m[35m (16.3ms)[0m  COMMIT
+Redirected to http://localhost/posts/11
+Completed 302 Found in 21ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:57:32 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (0.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2014-06-12 11:59:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "11"]]
+  Rendered posts/show.html.erb within layouts/admin (15.8ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 166ms (Views: 88.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 11:59:47 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (4.2ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:00:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (26.2ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 142ms (Views: 78.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:01:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (46.2ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 179ms (Views: 154.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:02:00 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (285.4ms)
+  Rendered posts/new.html.erb within layouts/admin (297.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 340ms (Views: 339.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:03:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (112.4ms)
+  Rendered posts/new.html.erb within layouts/admin (149.9ms)
+  Rendered shared/_admin_nav.html.erb (1.9ms)
+Completed 200 OK in 207ms (Views: 190.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-12 12:04:06 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/new.html.erb within layouts/admin (4.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 12:04:22 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (6.5ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.6ms)

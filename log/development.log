@@ -19155,3 +19155,46 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/admin (22.5ms)
   Rendered shared/_admin_nav.html.erb (1.0ms)
 Completed 200 OK in 93ms (Views: 46.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:50:01 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (17.8ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 92ms (Views: 85.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:59:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (8.7ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 13:59:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (16.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (104.0ms)[0m  [1mALTER TABLE "posts" DROP "citations"[0m
+  [1m[35mSQL (410.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140612185754"]]
+  [1m[36m (73.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-12 15:04:45 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (21.7ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 208ms (Views: 178.2ms | ActiveRecord: 3.5ms)

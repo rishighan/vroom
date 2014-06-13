@@ -2,3 +2,5 @@
 + categories, habtm
 + user authentication
 + 'feature' post
+
++ tests

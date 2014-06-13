@@ -8,6 +8,7 @@
     <h2> <%= post.title %> </h2>
     <p>
         <%= markdown(post.content) %>
+        <%= renderimage(post.picture.url(:small)) %>
 
     </p>
 

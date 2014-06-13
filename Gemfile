@@ -11,7 +11,7 @@ gem 'rails', '4.0.3'
 gem 'pg'
 
 #attachments
-gem 'paperclip'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 #file uploads
 gem "jquery-fileupload-rails"

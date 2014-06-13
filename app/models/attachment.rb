@@ -10,7 +10,7 @@ class Attachment < ActiveRecord::Base
 
   before_post_process :resize_images
 
-  validates_attachment_size :photo, :less_than => 2.megabytes
+  validates_attachment_size :picture, :less_than => 2.megabytes
 
   # check if asset is image
   # for use in the view

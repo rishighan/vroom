@@ -8,7 +8,7 @@
     <h2> <%= post.title %> </h2>
     <p>
         <%= markdown(post.content) %>
-        <%= image_tag post.picture(:small) if post.picture.present? %>
+        <%= image_tag post.attachments(:small) if post.attachments.present? %>
 
     </p>
 

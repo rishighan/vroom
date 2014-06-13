@@ -22236,3 +22236,1410 @@ Migrating to AddAttachmentPictureToAttachments (20140613193304)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140613193304"]]
   [1m[35m (16.0ms)[0m  COMMIT
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2014-06-13 16:09:33 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (58.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered posts/edit.html.erb within layouts/admin (545.2ms)
+  Rendered shared/_admin_nav.html.erb (1.5ms)
+Completed 200 OK in 1312ms (Views: 618.0ms | ActiveRecord: 91.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:14:44 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 2036ms
+
+NoMethodError (undefined method `before_photo_post_process' for #<Class:0x007fba24e17f40>):
+  app/models/attachment.rb:13:in `<class:Attachment>'
+  app/models/attachment.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:6:in `block in new'
+  app/controllers/posts_controller.rb:6:in `times'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:14:47 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `before_photo_post_process' for #<Class:0x007fba24fa7d88>):
+  app/models/attachment.rb:13:in `<class:Attachment>'
+  app/models/attachment.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:6:in `block in new'
+  app/controllers/posts_controller.rb:6:in `times'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:15:02 -0400
+Processing by PostsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 219ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (34.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:22:44 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.3) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.3) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__3979137487905109962__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140613212037)
+  [1m[35m (11.2ms)[0m  BEGIN
+  [1m[36m (203.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (85.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613212037"]]
+  [1m[36m (127.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:23:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 77ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTableCategoriesPosts (20140613212712)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (125.6ms)[0m  [1mCREATE TABLE "table_categories_posts" ("id" serial primary key, "post_id" integer, "category_id" integer) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613212712"]]
+  [1m[36m (31.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:28:23 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PostsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 99ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:29:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 208ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:29:32 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (41.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (74.9ms)
+Completed 500 Internal Server Error in 129ms
+
+ActionView::Template::Error (undefined method `picture' for #<Post:0x007fb06b6eb9f0>):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.picture(:small) if post.picture.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197853639880'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197853639880'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:30:06 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (5.8ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation::ActiveRecord_Relation_Post:0x007fb06c33bc00>):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.picture(:small) if @posts.picture.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197853146660'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197853146660'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:30:09 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `picture' for nil:NilClass):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.picture(:small) if @post.picture.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197848717100'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197848717100'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:30:39 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (3.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `attachment' for #<Post:0x007fb06b27fba0>):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.attachment.picture(:small) if post.attachment.picture.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197844663680'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197844663680'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:30:50 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (75.7ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 11]]
+  Rendered posts/index.html.erb within layouts/admin (80.5ms)
+Completed 500 Internal Server Error in 82ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Associations::CollectionProxy []>):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.attachments.picture(:small) if post.attachments.picture.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197876966240'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197876966240'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:31:14 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (3.8ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `attachment' for #<Post:0x007fb06d2c5b80>):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.attachment(:small) if post.attachment.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___866310098945462661_70197854231300'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___866310098945462661_70197854231300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-13 17:31:22 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  Rendered posts/index.html.erb within layouts/admin (6.8ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:31:36 -0400
+Processing by PostsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:32:06 -0400
+Processing by PostsController#new as HTML
+ERROR: compiling _app_views_posts__form_html_erb__3505868338301708204_70197845640920 RAISED /Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...ppend=  nested_form_for (:post, url: posts_path, :html => {:...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected =>, expecting :: or '[' or '.'
+...post, url: posts_path, :html => {:multipart => true}) do |p|...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+... :html => {:multipart => true}) do |p| @output_buffer.safe_a...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+';     @post.errors.full_messages.each do |msg| 
+                                         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:76: syntax error, unexpected keyword_end, expecting end-of-input
+'; end 
+      ^
+Function body:           def _app_views_posts__form_html_erb__3505868338301708204_70197845640920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "posts/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  nested_form_for (:post, url: posts_path, :html => {:multipart => true}) do |p| @output_buffer.safe_append='
+
+'; if @post.errors.any? 
+@output_buffer.safe_append='<div class="error-explanation">
+<h3>';@output_buffer.append=( pluralize(@post.errors.count, "error")  );@output_buffer.safe_append=' has pervented this post from been saved.</h3>
+<ul>
+';     @post.errors.full_messages.each do |msg| 
+@output_buffer.safe_append='      <li>';@output_buffer.append=( msg );@output_buffer.safe_append='</li>
+';     end 
+@output_buffer.safe_append='</ul>
+</div>
+'; end 
+@output_buffer.safe_append='
+    <p>
+        ';@output_buffer.append=( p.label :title );@output_buffer.safe_append=' <br/>
+        ';@output_buffer.append=( p.text_field(:title, :size => "70") );@output_buffer.safe_append='
+    </p>
+
+    <p>
+    ';@output_buffer.append=( p.label :category_id );@output_buffer.safe_append='
+    ';@output_buffer.append=( hidden_field_tag "post[category_ids][]" , nil);@output_buffer.safe_append='
+
+';     Category.all.each do |cat| 
+@output_buffer.safe_append='
+        ';@output_buffer.append=( check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat));@output_buffer.safe_append='
+        ';@output_buffer.append=( label_tag dom_id(cat), cat.category_name );@output_buffer.safe_append=' <br>
+
+';    end 
+@output_buffer.safe_append='    </p>
+
+    <p>
+       ';@output_buffer.append=( p.label :content );@output_buffer.safe_append=' <br/>
+       ';@output_buffer.append=( p.text_area(:content, :size => "90x12") );@output_buffer.safe_append='
+
+       ';@output_buffer.append=( p.label :picture );@output_buffer.safe_append='<br/>
+       ';@output_buffer.append=( p.file_field :picture );@output_buffer.safe_append='
+
+        <div class="md-syntax clearfix">
+        <h5>Markdown syntax</h5><br/>
+        <ul class="four columns">
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+            <li> <code>**double asterisks**</code> <strong>bold</strong></li>
+            <li> <code>#This is an H1</code> </li>
+            <li><code>## This is an H2</code></li>
+            <li><code>###### This is an H6 </code></li>
+
+
+        </ul>
+        <ul class="four columns">
+        <li><code>[link](http://rishighan.com "Rishi Ghan\'s website")</code></li>
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+
+
+        </ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https://images.com/icon48.png "Logo Title Text 1")</code>
+        <p>More information: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+        </div>
+
+
+        </div>
+
+ </p>
+
+    <p>
+        ';@output_buffer.append=( p.label :excerpt );@output_buffer.safe_append='<br/>
+        ';@output_buffer.append=( p.text_area(:excerpt, :size => "90x8") );@output_buffer.safe_append='
+    </p>
+
+
+    <p>
+        ';@output_buffer.append=( p.submit );@output_buffer.safe_append='
+    </p>
+
+'; end 
+@output_buffer.safe_append='
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/roweandesign/Sites/personal-website/app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3425373539743151270_70197860489460'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__4212627059973906903__process_action__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__1924442201703503876__call__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered posts/_form.html.erb (1.3ms)
+  Rendered posts/new.html.erb within layouts/admin (19.6ms)
+Completed 500 Internal Server Error in 106ms
+
+ActionView::Template::Error (/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...ppend=  nested_form_for (:post, url: posts_path, :html => {:...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected =>, expecting :: or '[' or '.'
+...post, url: posts_path, :html => {:multipart => true}) do |p|...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+... :html => {:multipart => true}) do |p| @output_buffer.safe_a...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+';     @post.errors.full_messages.each do |msg| 
+                                         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:76: syntax error, unexpected keyword_end, expecting end-of-input
+'; end 
+      ^):
+    1: <%= nested_form_for (:post, url: posts_path, :html => {:multipart => true}) do |p| %>
+    2: 
+    3: <% if @post.errors.any? %>
+    4: <div class="error-explanation">
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3425373539743151270_70197860489460'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:32:55 -0400
+Processing by PostsController#new as HTML
+ERROR: compiling _app_views_posts__form_html_erb__3505868338301708204_70197844254800 RAISED /Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...ppend=  nested_form_for (:post, :url => posts_path, :html =>...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected =>, expecting :: or '[' or '.'
+...t, :url => posts_path, :html => {:multipart => true}) do |p|...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+... :html => {:multipart => true}) do |p| @output_buffer.safe_a...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+';     @post.errors.full_messages.each do |msg| 
+                                         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:76: syntax error, unexpected keyword_end, expecting end-of-input
+'; end 
+      ^
+Function body:           def _app_views_posts__form_html_erb__3505868338301708204_70197844254800(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "posts/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  nested_form_for (:post, :url => posts_path, :html => {:multipart => true}) do |p| @output_buffer.safe_append='
+
+'; if @post.errors.any? 
+@output_buffer.safe_append='<div class="error-explanation">
+<h3>';@output_buffer.append=( pluralize(@post.errors.count, "error")  );@output_buffer.safe_append=' has pervented this post from been saved.</h3>
+<ul>
+';     @post.errors.full_messages.each do |msg| 
+@output_buffer.safe_append='      <li>';@output_buffer.append=( msg );@output_buffer.safe_append='</li>
+';     end 
+@output_buffer.safe_append='</ul>
+</div>
+'; end 
+@output_buffer.safe_append='
+    <p>
+        ';@output_buffer.append=( p.label :title );@output_buffer.safe_append=' <br/>
+        ';@output_buffer.append=( p.text_field(:title, :size => "70") );@output_buffer.safe_append='
+    </p>
+
+    <p>
+    ';@output_buffer.append=( p.label :category_id );@output_buffer.safe_append='
+    ';@output_buffer.append=( hidden_field_tag "post[category_ids][]" , nil);@output_buffer.safe_append='
+
+';     Category.all.each do |cat| 
+@output_buffer.safe_append='
+        ';@output_buffer.append=( check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat));@output_buffer.safe_append='
+        ';@output_buffer.append=( label_tag dom_id(cat), cat.category_name );@output_buffer.safe_append=' <br>
+
+';    end 
+@output_buffer.safe_append='    </p>
+
+    <p>
+       ';@output_buffer.append=( p.label :content );@output_buffer.safe_append=' <br/>
+       ';@output_buffer.append=( p.text_area(:content, :size => "90x12") );@output_buffer.safe_append='
+
+       ';@output_buffer.append=( p.label :picture );@output_buffer.safe_append='<br/>
+       ';@output_buffer.append=( p.file_field :picture );@output_buffer.safe_append='
+
+        <div class="md-syntax clearfix">
+        <h5>Markdown syntax</h5><br/>
+        <ul class="four columns">
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+            <li> <code>**double asterisks**</code> <strong>bold</strong></li>
+            <li> <code>#This is an H1</code> </li>
+            <li><code>## This is an H2</code></li>
+            <li><code>###### This is an H6 </code></li>
+
+
+        </ul>
+        <ul class="four columns">
+        <li><code>[link](http://rishighan.com "Rishi Ghan\'s website")</code></li>
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+
+
+        </ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https://images.com/icon48.png "Logo Title Text 1")</code>
+        <p>More information: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+        </div>
+
+
+        </div>
+
+ </p>
+
+    <p>
+        ';@output_buffer.append=( p.label :excerpt );@output_buffer.safe_append='<br/>
+        ';@output_buffer.append=( p.text_area(:excerpt, :size => "90x8") );@output_buffer.safe_append='
+    </p>
+
+
+    <p>
+        ';@output_buffer.append=( p.submit );@output_buffer.safe_append='
+    </p>
+
+'; end 
+@output_buffer.safe_append='
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/roweandesign/Sites/personal-website/app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3425373539743151270_70197860489460'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__4212627059973906903__process_action__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__1924442201703503876__call__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered posts/_form.html.erb (1.2ms)
+  Rendered posts/new.html.erb within layouts/admin (1.9ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...ppend=  nested_form_for (:post, :url => posts_path, :html =>...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected =>, expecting :: or '[' or '.'
+...t, :url => posts_path, :html => {:multipart => true}) do |p|...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+... :html => {:multipart => true}) do |p| @output_buffer.safe_a...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+';     @post.errors.full_messages.each do |msg| 
+                                         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:76: syntax error, unexpected keyword_end, expecting end-of-input
+'; end 
+      ^):
+    1: <%= nested_form_for (:post, :url => posts_path, :html => {:multipart => true}) do |p| %>
+    2: 
+    3: <% if @post.errors.any? %>
+    4: <div class="error-explanation">
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3425373539743151270_70197860489460'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:33:22 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (59.0ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (562.0ms)
+  Rendered posts/new.html.erb within layouts/admin (562.7ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 643ms (Views: 582.5ms | ActiveRecord: 59.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-06-13 17:33:44 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"khkjhkjh", "category_ids"=>[""], "content"=>"khkjhkhkh", "excerpt"=>"khkhkjhkjh"}, "commit"=>"Save Post"}
+Unpermitted parameters: category_ids
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (213.6ms)[0m  INSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["content", "khkjhkhkh"], ["created_at", Fri, 13 Jun 2014 21:33:44 UTC +00:00], ["excerpt", "khkhkjhkjh"], ["title", "khkjhkjh"], ["updated_at", Fri, 13 Jun 2014 21:33:44 UTC +00:00]]
+  [1m[36m (26.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts/14
+Completed 302 Found in 246ms (ActiveRecord: 240.6ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:33:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (49.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  Rendered posts/show.html.erb within layouts/admin (1.7ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (undefined method `picture' for #<Post:0x007fb06d2aef98>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.picture.url(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197849753700'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:07 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  Rendered posts/show.html.erb within layouts/admin (1.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `attachment' for #<Post:0x007fb06c455078>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.attachment.url(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197853681640'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:10 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  Rendered posts/show.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `url' for #<ActiveRecord::Associations::CollectionProxy []>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.attachments.url(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197849168300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:12 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  Rendered posts/show.html.erb within layouts/admin (1.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `url' for #<ActiveRecord::Associations::CollectionProxy []>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.attachments.url(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197849168300'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  Rendered posts/show.html.erb within layouts/admin (2.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Associations::CollectionProxy []>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.attachments.picture.url(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197848503740'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:34 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  Rendered posts/show.html.erb within layouts/admin (16.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-06-13 17:34:34 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (51.7ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:38 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  Rendered posts/show.html.erb within layouts/admin (1.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `attachment' for #<Post:0x007fb06bd59b70>):
+     5:         </h2>
+     6:         <p>
+     7:             <%= markdown(@post.content)  %>
+     8:             <%= image_tag @post.attachment(:medium) %>
+     9:         </p>
+    10: 
+    11: </article>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1271946875419353018_70197850051580'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-13 17:34:40 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 14]]
+  Rendered posts/show.html.erb within layouts/admin (1.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-06-13 17:34:42 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (267.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:34:45 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (5.1ms)
+  Rendered posts/new.html.erb within layouts/admin (39.3ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-13 17:35:10 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (3.8ms)
+  Rendered categories/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 141ms (Views: 137.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2014-06-13 17:35:14 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "commit"=>"Create Category"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `category_name' for #<Category id: nil, created_at: nil, updated_at: nil>):
+  app/controllers/categories_controller.rb:30:in `block in create'
+  app/controllers/categories_controller.rb:29:in `create'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (298.7ms)
+PG::UndefinedTable: ERROR:  relation "categories_posts" does not exist
+LINE 5:                WHERE a.attrelid = '"categories_posts"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"categories_posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTableCategoriesPosts (20140613212712)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (90.0ms)[0m  DROP TABLE "categories_posts"
+PG::UndefinedTable: ERROR:  table "categories_posts" does not exist
+: DROP TABLE "categories_posts"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/categories" for 127.0.0.1 at 2014-06-13 17:44:25 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "commit"=>"Create Category"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 70ms
+
+NoMethodError (undefined method `category_name' for #<Category id: nil, created_at: nil, updated_at: nil>):
+  app/controllers/categories_controller.rb:30:in `block in create'
+  app/controllers/categories_controller.rb:29:in `create'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (184.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategoriesPosts (20140613212712)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategoriesPosts (20140613212712)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (453.9ms)[0m  DROP TABLE "categories_posts"
+  [1m[36mSQL (87.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140613212712'[0m
+  [1m[35m (84.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategoriesPosts (20140613212712)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (275.4ms)[0m  [1mCREATE TABLE "categories_posts" ("id" serial primary key, "post_id" integer, "category_id" integer) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613212712"]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140613214700)
+  [1m[35m (15.4ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "categories" already exists
+: CREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140613214700)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (96.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613214700"]]
+  [1m[36m (16.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/categories" for 127.0.0.1 at 2014-06-13 17:48:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered categories/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 93ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-13 17:48:50 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (6.5ms)
+  Rendered categories/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2014-06-13 17:48:52 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "commit"=>"Create Category"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (28.0ms)[0m  INSERT INTO "categories" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", Fri, 13 Jun 2014 21:48:52 UTC +00:00], ["updated_at", Fri, 13 Jun 2014 21:48:52 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/categories/1
+Completed 302 Found in 33ms (ActiveRecord: 28.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2014-06-13 17:48:52 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (1.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at 2014-06-13 17:48:54 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered categories/_form.html.erb (1.5ms)
+  Rendered categories/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-13 17:50:05 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 11]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 12]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 13]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  Rendered posts/index.html.erb within layouts/admin (104.6ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 360ms (Views: 260.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:50:11 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 10ms
+
+NameError (uninitialized constant Post::Category):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-13 17:50:11 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant Post::Category):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at 2014-06-13 17:50:26 -0400
+
+ActionController::RoutingError (No route matches [GET] "/categories/1/edit"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.8ms)

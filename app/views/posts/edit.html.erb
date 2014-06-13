@@ -1,6 +1,6 @@
 <h2>Edit Post</h2>
 
-<%= form_for :post, url: post_path(@post), method: :patch do |p| %>
+<%= form_for :post, url: post_path(@post), method: :patch, :html => {:multipart => true} do |p| %>
 <% if @post.errors.any? %>
 <div class="error-explanation">
 <h3><%= pluralize(@post.errors.count, "error")  %> prevented this post from been saved.</h3>
@@ -21,7 +21,8 @@
        <%= p.label :content %> <br/>
        <%= p.text_area(:content, :size => "90x12") %>
 
-
+       <%= p.label :picture %><br/>
+       <%= p.file_field :picture %>
 
         <div class="md-syntax clearfix">
         <h5>Markdown syntax</h5><br/>

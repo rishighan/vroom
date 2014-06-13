@@ -32,12 +32,6 @@ end
   end
 
 
-  def renderimage(img_url)
-    unless getfilename(img_url)=='missing.png' # hack to get
-      image_tag(img_url)
-    end
-  end
-
   def getfilename(url)
     output = File.basename(url)
   end

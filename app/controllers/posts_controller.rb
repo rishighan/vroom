@@ -2,11 +2,14 @@ class PostsController < ApplicationController
  layout "admin"
     def new
         @post = Post.new
+
+        4.times {@post.attachments.build}
+        @post.categories.build
     end
 
     def index
         @posts = Post.all
-
+        @attachment = Attachment.all
     end
 
     def create

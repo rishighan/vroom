@@ -4,12 +4,10 @@ class Post < ActiveRecord::Base
     has_and_belongs_to_many :categories
     accepts_nested_attributes_for :categories
 
-    has_attached_file :picture,
-                      :styles => {:medium => "350x", :thumb=> "100x" },
-                      :default_url => "/images/:style/missing.png"
-
-    validates_attachment_content_type :picture,
-                                      :content_type => /\Aimage/,
-                                      :size => {:in => 0..2048.kilobytes}
-
+    #attachments
+    has_many :attachments, :dependent => :destroy
+    #validate attachments
+     #reject_if nested attributes are empty, dont write them to database.
+    accepts_nested_attributes_for :attachments, :allow_destroy => true,
+                                :reject_if => proc { |attributes| attributes['photo'].blank? }
 end

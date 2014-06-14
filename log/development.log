@@ -23643,3 +23643,115 @@ ActionController::RoutingError (No route matches [GET] "/categories/1/edit"):
   Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
   Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
   Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.8ms)
+  [1m[36m (24.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (26.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140522200429)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (32.9ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "content" text, "excerpt" text, "citations" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140522200429"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveCitationsFromPosts (20140612185754)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "posts" DROP "citations"[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140612185754"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentPictureToPosts (20140613153759)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "picture_file_name" character varying(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "posts" ADD COLUMN "picture_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "picture_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" ADD COLUMN "picture_updated_at" timestamp
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140613153759"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateAttachments (20140613185816)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "attachments" ("id" serial primary key, "post_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.6ms)[0m  [1mCREATE INDEX "index_attachments_on_post_id" ON "attachments" ("post_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613185816"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentPictureToAttachments (20140613193304)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_name" character varying(255)[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_updated_at" timestamp
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140613193304"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCategoriesPosts (20140613212712)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "categories_posts" ("id" serial primary key, "post_id" integer, "category_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140613212712"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-14 13:17:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (5.7ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 22.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-14 13:18:02 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:18:03 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 25ms
+
+NameError (uninitialized constant Post::Category):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:18:03 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant Post::Category):
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:41:13 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (33.1ms)
+  Rendered posts/new.html.erb within layouts/admin (34.0ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Category):
+    20:     <%= p.label :category_id %>
+    21:     <%= hidden_field_tag "post[category_ids][]" , nil%>
+    22: 
+    23:     <% Category.all.each do |cat| %>
+    24: 
+    25:         <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
+    26:         <%= label_tag dom_id(cat), cat.category_name %> <br>
+  app/views/posts/_form.html.erb:23:in `block in _app_views_posts__form_html_erb___2105921932645577519_2202605840'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___2105921932645577519_2202605840'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___1512496415602878470_2202632220'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)

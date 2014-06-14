@@ -4,7 +4,7 @@ class PostsController < ApplicationController
         @post = Post.new
 
         4.times {@post.attachments.build}
-        @post.categories.build
+        #@post.categories.build
     end
 
     def index

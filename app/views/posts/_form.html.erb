@@ -23,7 +23,7 @@
     <% Category.all.each do |cat| %>
 
         <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
-        <%= label_tag dom_id(cat), cat.category_name %> <br>
+        <%= label_tag dom_id(cat), cat.title%> <br>
 
     <%end %>
     </p>

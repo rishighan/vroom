@@ -1,3 +1,17 @@
-<% form_for @category url: category_path do |c| %>
+<%= form_for @category, :url => categories_path do |c| %>
+
+  <p>
+    <%= c.label :title %><br/>
+    <%= c.text_field :title %>
+  </p>
+
+  <p>
+    <%= c.label :description %>
+    <%= c.text_area :description, :size=>"70x12" %>
+  </p>
+
+  <p>
+    <%= c.submit "Create" %>
+  </p>
 
 <% end %>

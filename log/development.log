@@ -23755,3 +23755,1221 @@ ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplate
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:46:59 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (13.4ms)
+  Rendered posts/new.html.erb within layouts/admin (14.0ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 16.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-14 13:47:04 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (1.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:47:05 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (4.6ms)
+  Rendered posts/new.html.erb within layouts/admin (5.7ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 13:47:09 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-14 13:47:14 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (1.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 13:47:15 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:51:31 -0400
+
+ActionController::RoutingError (No route matches [GET] "/categories/new"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  passenger (4.0.44) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.44) lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:52:38 -0400
+Processing by CategoriesController#new as HTML
+ERROR: compiling _app_views_categories__form_html_erb___4227261609035919716_2203765120 RAISED /Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...fer.new; form_for @category url: category_path do |c| 
+...                               ^
+Function body:           def _app_views_categories__form_html_erb___4227261609035919716_2203765120(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "categories/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; form_for @category url: category_path do |c| 
+@output_buffer.safe_append='
+  <p>
+    ';@output_buffer.append=( c.label :title );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( c.text_field :title );@output_buffer.safe_append='
+  </p>
+
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/rishighan/sites/personal-website/app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/rishighan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__967056127036657067__process_action__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered categories/_form.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (/Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...fer.new; form_for @category url: category_path do |c| 
+...                               ^):
+    1: <% form_for @category url: category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:53:07 -0400
+Processing by CategoriesController#new as HTML
+ERROR: compiling _app_views_categories__form_html_erb___4227261609035919716_2202866380 RAISED /Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+...uffer.new; form_for @category :url => category_path do |c| 
+...                               ^
+Function body:           def _app_views_categories__form_html_erb___4227261609035919716_2202866380(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "categories/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; form_for @category :url => category_path do |c| 
+@output_buffer.safe_append='
+  <p>
+    ';@output_buffer.append=( c.label :title );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( c.text_field :title );@output_buffer.safe_append='
+  </p>
+
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/rishighan/sites/personal-website/app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/rishighan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__967056127036657067__process_action__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered categories/_form.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (/Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+...uffer.new; form_for @category :url => category_path do |c| 
+...                               ^):
+    1: <% form_for @category :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:53:20 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for @category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2202016220'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:53:53 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for :category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2179231040'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:57:27 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for :category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2179231040'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2014-06-14 13:57:45 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for CategoriesController):
+  actionpack (4.0.3) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  passenger (4.0.44) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.44) lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 13:57:50 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for :category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2179231040'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:03:15 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for :category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2179231040'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:03:40 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for :category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2179231040'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:05:52 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    1: <% form_for @category, :url => category_path do |c| %>
+    2: 
+    3:   <p>
+    4:     <%= c.label :title %><br/>
+  app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb___4227261609035919716_2180676920'
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:06:49 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (5.0ms)
+  Rendered categories/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:07:53 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.2ms)
+  Rendered categories/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:08:14 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (4.4ms)
+  Rendered categories/new.html.erb within layouts/admin (5.0ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 14:08:16 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (8.9ms)
+  Rendered posts/new.html.erb within layouts/admin (9.6ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 12.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-14 14:08:18 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 14:08:19 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (4.1ms)
+  Rendered posts/new.html.erb within layouts/admin (5.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 14:09:20 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (11.6ms)
+  Rendered posts/new.html.erb within layouts/admin (12.1ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 32ms (Views: 15.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:09:22 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (5.3ms)
+  Rendered categories/new.html.erb within layouts/admin (6.4ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 14:09:23 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (4.5ms)
+  Rendered posts/new.html.erb within layouts/admin (5.6ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 14:09:26 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.0ms)
+  Rendered categories/new.html.erb within layouts/admin (1.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 14:09:29 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:10:06 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/admin (3.8ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:10:08 -0400
+Processing by CategoriesController#new as HTML
+ERROR: compiling _app_views_categories__form_html_erb___4227261609035919716_2179709600 RAISED /Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+...nd=( c.text_area :description :size=>"70x12" );@output_buffe...
+...                               ^
+Function body:           def _app_views_categories__form_html_erb___4227261609035919716_2179709600(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "categories/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_for @category, :url => categories_path do |c| @output_buffer.safe_append='
+
+  <p>
+    ';@output_buffer.append=( c.label :title );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( c.text_field :title );@output_buffer.safe_append='
+  </p>
+
+  <p>
+    ';@output_buffer.append=( c.label :description );@output_buffer.safe_append='
+    ';@output_buffer.append=( c.text_area :description :size=>"70x12" );@output_buffer.safe_append='
+  </p>
+
+  <p>
+    ';@output_buffer.append=( c.submit "Create" );@output_buffer.safe_append='
+  </p>
+
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/rishighan/sites/personal-website/app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2202700280'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/rishighan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__967056127036657067__process_action__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered categories/_form.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/admin (1.5ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (/Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+...nd=( c.text_area :description :size=>"70x12" );@output_buffe...
+...                               ^):
+     7: 
+     8:   <p>
+     9:     <%= c.label :description %>
+    10:     <%= c.text_area :description :size=>"70x12" %>
+    11:   </p>
+    12: 
+    13:   <p>
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2202700280'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:10:08 -0400
+Processing by CategoriesController#new as HTML
+ERROR: compiling _app_views_categories__form_html_erb___4227261609035919716_2177787260 RAISED /Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+...nd=( c.text_area :description :size=>"70x12" );@output_buffe...
+...                               ^
+Function body:           def _app_views_categories__form_html_erb___4227261609035919716_2177787260(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "categories/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_for @category, :url => categories_path do |c| @output_buffer.safe_append='
+
+  <p>
+    ';@output_buffer.append=( c.label :title );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( c.text_field :title );@output_buffer.safe_append='
+  </p>
+
+  <p>
+    ';@output_buffer.append=( c.label :description );@output_buffer.safe_append='
+    ';@output_buffer.append=( c.text_area :description :size=>"70x12" );@output_buffer.safe_append='
+  </p>
+
+  <p>
+    ';@output_buffer.append=( c.submit "Create" );@output_buffer.safe_append='
+  </p>
+
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/rishighan/sites/personal-website/app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/rishighan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__967056127036657067__process_action__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/Users/rishighan/.rvm/gems/ruby-2.1.0/gems/passenger-4.0.44/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered categories/_form.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/admin (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (/Users/rishighan/sites/personal-website/app/views/categories/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+...nd=( c.text_area :description :size=>"70x12" );@output_buffe...
+...                               ^):
+     7: 
+     8:   <p>
+     9:     <%= c.label :description %>
+    10:     <%= c.text_area :description :size=>"70x12" %>
+    11:   </p>
+    12: 
+    13:   <p>
+  app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb__2216775320712468714_2203786420'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:10:18 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/admin (2.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:10:23 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (3.8ms)
+  Rendered posts/new.html.erb within layouts/admin (4.5ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:10:24 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/admin (2.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:18:34 -0400
+
+SyntaxError (/Users/rishighan/sites/personal-website/app/controllers/categories_controller.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__587708558500311279__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  passenger (4.0.44) lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  passenger (4.0.44) lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  passenger (4.0.44) lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2014-06-14 23:18:49 -0400
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (4.7ms)
+  Rendered categories/new.html.erb within layouts/admin (5.3ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2014-06-14 23:19:21 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JSfiQmdkp321viXE4hQ4IQh+u6oKno4QxN7Wm0jdvOY=", "category"=>{"title"=>"General", "description"=>"Just general talk, nothing serious. Stream of consciousness and anything that allows the mind to be at ease."}, "commit"=>"Create"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (18.4ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Sun, 15 Jun 2014 03:19:21 UTC +00:00], ["description", "Just general talk, nothing serious. Stream of consciousness and anything that allows the mind to be at ease."], ["title", "General"], ["updated_at", Sun, 15 Jun 2014 03:19:21 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:8090/categories/1
+Completed 302 Found in 22ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2014-06-14 23:19:21 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered categories/show.html.erb within layouts/admin (0.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:19:29 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (11.1ms)
+  Rendered posts/new.html.erb within layouts/admin (11.8ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `category_name' for #<Category:0x00000103f57978>):
+    23:     <% Category.all.each do |cat| %>
+    24: 
+    25:         <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
+    26:         <%= label_tag dom_id(cat), cat.category_name %> <br>
+    27: 
+    28:     <%end %>
+    29:     </p>
+  app/views/posts/_form.html.erb:26:in `block (2 levels) in _app_views_posts__form_html_erb___2105921932645577519_2206488360'
+  app/views/posts/_form.html.erb:23:in `block in _app_views_posts__form_html_erb___2105921932645577519_2206488360'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___2105921932645577519_2206488360'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___1512496415602878470_2206520060'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:19:29 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/new.html.erb within layouts/admin (4.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `category_name' for #<Category:0x00000103a37358>):
+    23:     <% Category.all.each do |cat| %>
+    24: 
+    25:         <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
+    26:         <%= label_tag dom_id(cat), cat.category_name %> <br>
+    27: 
+    28:     <%end %>
+    29:     </p>
+  app/views/posts/_form.html.erb:26:in `block (2 levels) in _app_views_posts__form_html_erb___2105921932645577519_2202605840'
+  app/views/posts/_form.html.erb:23:in `block in _app_views_posts__form_html_erb___2105921932645577519_2202605840'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___2105921932645577519_2202605840'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___1512496415602878470_2202632220'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:20:02 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (4.4ms)
+  Rendered posts/new.html.erb within layouts/admin (5.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-14 23:20:17 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (13.1ms)
+  Rendered posts/new.html.erb within layouts/admin (13.7ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 16.5ms | ActiveRecord: 3.7ms)

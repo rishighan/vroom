@@ -11,6 +11,9 @@ RishighanCom::Application.routes.draw do
   #posts
   resources :posts
 
+  #categories
+  resources :categories
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

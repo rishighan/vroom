@@ -16,6 +16,73 @@
 
  */
 
+body {
+  background-color: white;
+  color: #333333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: black;
+}
+a:visited {
+  color: #666666;
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #cc0000;
+  color: white;
+}
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .c, .highlight .cd {
@@ -828,6 +895,11 @@
   src: url(/assets/Lato-Regular-ecf28cd8ee4fa480ef11a0f796158a9d.ttf);
 }
 
+@font-face {
+  font-family: Muli-regular;
+  src: url(/assets/Muli-Regular-ae912b4feaf1281fc7c82e063333a4bb.ttf);
+}
+
 /* Poetry page */
 .haiku {
   font-family: Bitter-bold;
@@ -883,6 +955,10 @@
 .posts-admin h2, .posts-admin h3, .posts-admin h4, .posts-admin h5 {
   font-family: 'Lato-regular';
 }
+.posts-admin .well {
+  background: #fffef1;
+  padding: 10px;
+}
 .posts-admin .even {
   background: #fffef1;
 }
@@ -892,6 +968,7 @@
 .posts-admin article {
   margin: 0 0 20px 0px;
   padding: 10px;
+  border-left: 1px solid #ffffcc;
 }
 .posts-admin article:hover {
   border-left: 1px solid #cccccc;
@@ -901,6 +978,7 @@
 }
 .posts-admin article ol li p {
   margin: 0;
+  font-family: 'Muli-regular';
 }
 .posts-admin article div {
   margin: 0 0 0 0;

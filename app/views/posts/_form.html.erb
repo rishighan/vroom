@@ -16,14 +16,14 @@
         <%= p.text_field(:title, :size => "70") %>
     </p>
 
-    <p>
+    <p class="well">
     <%= p.label :category_id %>
     <%= hidden_field_tag "post[category_ids][]" , nil%>
 
     <% Category.all.each do |cat| %>
 
         <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
-        <%= label_tag dom_id(cat), cat.title%> <br>
+        <%= label_tag dom_id(cat), cat.title%>
 
     <%end %>
     </p>

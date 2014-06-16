@@ -9,5 +9,5 @@ class Post < ActiveRecord::Base
     #validate attachments
     #reject_if nested attributes are empty, dont write them to database.
     accepts_nested_attributes_for :attachments, :allow_destroy => true,
-                                :reject_if => proc { |attributes| attributes['photo'].blank? }
+                                  :reject_if => proc { |attributes| attributes['photo'].blank? }
 end

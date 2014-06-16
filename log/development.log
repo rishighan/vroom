@@ -25429,3 +25429,108 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (5.1ms)
   Rendered shared/_admin_nav.html.erb (0.3ms)
 Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (15.2ms)[0m  BEGIN
+  [1m[36m (1188.6ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "categories" already exists
+: CREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (40.0ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (114.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE "categories"[0m
+  [1m[35mSQL (195.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140614174619'
+  [1m[36m (27.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (70.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (16.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (15.7ms)[0m  BEGIN
+  [1m[36mSQL (79.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140613212712'[0m
+  [1m[35m (154.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (194.7ms)[0m  CREATE TABLE "categories_posts" ("post_id" integer, "category_id" integer) 
+  [1m[36mSQL (58.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140613212712"]]
+  [1m[35m (27.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 13:52:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (206.3ms)
+  Rendered posts/new.html.erb within layouts/admin (249.4ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 572ms (Views: 363.0ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 14:15:56 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (151.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (164.8ms)
+  Rendered posts/new.html.erb within layouts/admin (178.9ms)
+  Rendered shared/_admin_nav.html.erb (1.5ms)
+Completed 200 OK in 282ms (Views: 100.2ms | ActiveRecord: 151.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 16:28:39 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (125.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (473.1ms)
+  Rendered posts/new.html.erb within layouts/admin (474.6ms)
+Completed 500 Internal Server Error in 516ms
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fde59ba5b78>:0x007fde595e2128>):
+    35: 
+    36:        <p class="well">
+    37: 
+    38:         <%= f.label :picture, t('.upload_new_file') %>
+    39:         <%= f.file_field :picture, multiple: true, name: 'upload[picture]' %>
+    40: 
+    41:         <script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="bar" style="width: 0%"></div></div></div></script>
+  app/views/posts/_form.html.erb:38:in `block in _app_views_posts__form_html_erb__4527172855242364591_70296479386060'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__4527172855242364591_70296479386060'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__1831559066172554698_70296486935760'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 16:28:51 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (7.2ms)
+  Rendered posts/new.html.erb within layouts/admin (8.0ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 17:01:53 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (77.9ms)
+  Rendered posts/new.html.erb within layouts/admin (102.3ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 501ms (Views: 156.6ms | ActiveRecord: 201.1ms)

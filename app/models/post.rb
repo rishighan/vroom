@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
     accepts_nested_attributes_for :categories
 
     #attachments
-    has_many :attachments, :dependent => :destroy
+    has_many :attachments, :dependent => :destroy, as: :imageable
     #validate attachments
     #reject_if nested attributes are empty, dont write them to database.
     accepts_nested_attributes_for :attachments, :allow_destroy => true,

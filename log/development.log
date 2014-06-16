@@ -25534,3 +25534,526 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (102.3ms)
   Rendered shared/_admin_nav.html.erb (0.7ms)
 Completed 200 OK in 501ms (Views: 156.6ms | ActiveRecord: 201.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 17:31:15 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (169.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (183.4ms)
+  Rendered posts/new.html.erb within layouts/admin (205.6ms)
+  Rendered shared/_admin_nav.html.erb (7.4ms)
+Completed 200 OK in 284ms (Views: 76.1ms | ActiveRecord: 169.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 17:31:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (145.0ms)
+  Rendered posts/new.html.erb within layouts/admin (167.0ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 505ms (Views: 232.0ms | ActiveRecord: 59.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 17:32:38 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (3.7ms)
+  Rendered posts/new.html.erb within layouts/admin (17.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-06-16 18:05:56 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "post"=>{"title"=>"asdasd", "category_ids"=>["", "1"], "content"=>"asdasd", "excerpt"=>"asdasd"}, "upload"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f938c232fe0 @tempfile=#<Tempfile:/tmp/RackMultipart20140616-29506-13aielb>, @original_filename="6tIiF.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"upload[picture]\"; filename=\"6tIiF.gif\"\r\nContent-Type: image/gif\r\n">}, "commit"=>"Save Post"}
+Unpermitted parameters: category_ids
+  [1m[35m (89.9ms)[0m  BEGIN
+  [1m[36mSQL (227.8ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "asdasd"], ["created_at", Mon, 16 Jun 2014 22:05:56 UTC +00:00], ["excerpt", "asdasd"], ["title", "asdasd"], ["updated_at", Mon, 16 Jun 2014 22:05:56 UTC +00:00]]
+  [1m[35m (33.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/15
+Completed 302 Found in 376ms (ActiveRecord: 377.1ms)
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2014-06-16 18:05:56 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (34.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "15"]]
+  [1m[35mAttachment Load (19.6ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 15]]
+  Rendered posts/show.html.erb within layouts/admin (62.6ms)
+  Rendered shared/_admin_nav.html.erb (1.0ms)
+Completed 200 OK in 189ms (Views: 122.9ms | ActiveRecord: 53.8ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-06-16 18:05:57 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (59.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (95.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-16 18:06:01 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  [1m[35mAttachment Load (0.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 14]]
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 15]]
+  Rendered posts/index.html.erb within layouts/admin (21.7ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:06:07 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `picture=' for #<Post:0x007f9388d7d610>):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2014-06-16 18:17:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable, :dependent => :destroy
+                               ^):
+  app/controllers/posts_controller.rb:26:in `show'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:17:19 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable, :dependent => :destroy
+                               ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:17:45 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable, dependent :destroy
+                               ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:17:46 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable, dependent :destroy
+                               ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:18:04 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable, :dependent => :destroy
+                               ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:18:31 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable
+                               ^
+/Users/roweandesign/Sites/personal-website/app/models/post.rb:9: syntax error, unexpected =>, expecting keyword_end
+    :dependent => :destroy
+                 ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:18:36 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable
+                               ^
+/Users/roweandesign/Sites/personal-website/app/models/post.rb:9: syntax error, unexpected =>, expecting keyword_end
+    dependent => :destroy
+                ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:18:43 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable
+                               ^
+/Users/roweandesign/Sites/personal-website/app/models/post.rb:9: syntax error, unexpected ':', expecting keyword_end
+    dependent: destroy
+              ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:18:55 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable
+                               ^
+/Users/roweandesign/Sites/personal-website/app/models/post.rb:9: syntax error, unexpected =>, expecting keyword_end
+    :dependent => destroy
+                 ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:19:07 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 14]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 15]]
+  Rendered posts/index.html.erb within layouts/admin (178.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 293ms (Views: 126.2ms | ActiveRecord: 159.9ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:21:01 -0400
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/roweandesign/Sites/personal-website/app/models/post.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    has_many :attachments, as :imageable
+                               ^):
+  app/controllers/posts_controller.rb:11:in `index'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:21:22 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (102.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [[nil, 11], [nil, "Post"]]
+PG::UndefinedColumn: ERROR:  column attachments.imageable_id does not exist
+LINE 1: SELECT "attachments".* FROM "attachments"  WHERE "attachment...
+                                                         ^
+: SELECT "attachments".* FROM "attachments"  WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2
+  Rendered posts/index.html.erb within layouts/admin (116.0ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column attachments.imageable_id does not exist
+LINE 1: SELECT "attachments".* FROM "attachments"  WHERE "attachment...
+                                                         ^
+: SELECT "attachments".* FROM "attachments"  WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2):
+     8:     <h2> <%= post.title %> </h2>
+     9:     <p>
+    10:         <%= markdown(post.content) %>
+    11:         <%= image_tag post.attachments(:small) if post.attachments.present? %>
+    12: 
+    13:     </p>
+    14: 
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___950107897077911086_70135830476280'
+  app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___950107897077911086_70135830476280'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-06-16 18:21:48 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 14]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 15]]
+  Rendered posts/index.html.erb within layouts/admin (17.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 15.8ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:21:54 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `picture=' for #<Post:0x007f9388978f60>):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:22:18 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `each' for nil:NilClass):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:22:26 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+Completed 500 Internal Server Error in 28ms
+
+NoMethodError (undefined method `picture=' for #<ActiveRecord::Associations::CollectionProxy []>):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:22:35 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "14"]]
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `attachment' for #<Post:0x007f9388e37b00>):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:22:42 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 14]]
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `pictures=' for #<ActiveRecord::Associations::CollectionProxy []>):
+  app/controllers/posts_controller.rb:45:in `destroy'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started DELETE "/posts/14" for 127.0.0.1 at 2014-06-16 18:22:49 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 14]]
+  [1m[35m (98.8ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 14
+  [1m[36mSQL (16.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 14]]
+  [1m[35m (23.8ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 176ms (ActiveRecord: 142.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-16 18:22:49 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 15]]
+  Rendered posts/index.html.erb within layouts/admin (7.3ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/posts/15" for 127.0.0.1 at 2014-06-16 18:22:54 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"usNgv4pHPYmEtbcKEBoUQ+rzmfff0J3vwD5aou38rVs=", "id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "15"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35m (0.2ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 15
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-16 18:22:54 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 11]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1  [["post_id", 12]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."post_id" = $1[0m  [["post_id", 13]]
+  Rendered posts/index.html.erb within layouts/admin (6.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 18:23:02 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (8.7ms)
+  Rendered posts/new.html.erb within layouts/admin (25.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 66.8ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 18:31:32 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 153ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: imageable_id):
+  app/controllers/posts_controller.rb:6:in `block in new'
+  app/controllers/posts_controller.rb:6:in `times'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (31.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (16.0ms)[0m  BEGIN
+  [1m[36m (174.2ms)[0m  [1mDROP TABLE "attachments"[0m
+  [1m[35mSQL (100.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140613185816'
+  [1m[36m (87.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (141.6ms)[0m  [1mCREATE TABLE "attachments" ("id" serial primary key, "imageable_id" integer, "imageable_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (74.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613185816"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 18:46:25 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (20.9ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (44.1ms)
+  Rendered posts/new.html.erb within layouts/admin (57.8ms)
+  Rendered shared/_admin_nav.html.erb (1.5ms)
+Completed 200 OK in 225ms (Views: 93.5ms | ActiveRecord: 43.0ms)

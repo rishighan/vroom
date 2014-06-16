@@ -1,5 +1,5 @@
 class Attachment < ActiveRecord::Base
-  belongs_to :post
+  belongs_to :imageable, polymorphic: true
   #TODO: revisit different sizes for images.
   has_attached_file :picture,
                     :styles =>{ :medium => "660x",

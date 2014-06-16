@@ -16,9 +16,14 @@ class PostsController < ApplicationController
         @post = Post.new(post_params) #init model with attributes
 
         if @post.save #save model to db by mapping fields to columns
-            redirect_to @post
+            format.html {redirect_to @post, notice: "Post was successfully saved."}
+            format.json {
+                data = {id:@post.id, thumb: view_context.image_tag(@post.attachments(:medium))}
+                render json: data, status: :created, location: @post
+            }
         else
-            render 'new'
+            format.html{render 'new'}
+            format.json{render json: @post.errors, status:"Can't process this entity"}
         end
     end
 
@@ -42,7 +47,7 @@ class PostsController < ApplicationController
 
     def destroy
         @post = Post.find(params[:id])
-        @post.picture = nil
+        #@post.attachments.pictures = nil
         @post.destroy
 
         redirect_to posts_path

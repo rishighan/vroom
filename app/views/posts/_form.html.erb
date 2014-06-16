@@ -17,7 +17,7 @@
     </p>
 
     <p class="well">
-    <%= p.label :category_id %>
+    <%= p.label :category_id %><br/>
     <%= hidden_field_tag "post[category_ids][]" , nil%>
 
     <% Category.all.each do |cat| %>
@@ -26,14 +26,17 @@
         <%= label_tag dom_id(cat), cat.title%>
 
     <%end %>
+
     </p>
 
     <p>
        <%= p.label :content %> <br/>
        <%= p.text_area(:content, :size => "90x12") %>
 
+       <p class="well">
        <%= p.label :picture %><br/>
        <%= p.file_field :picture %>
+       </p>
 
         <div class="md-syntax clearfix">
         <h5>Markdown syntax</h5><br/>

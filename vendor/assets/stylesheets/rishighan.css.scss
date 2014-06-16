@@ -111,6 +111,7 @@ $normal-padding: 10px;
                 }
                 &:hover {
                     color: $rg-red;
+                    background:none;
                     text-decoration: underline;
                 }
             }
@@ -139,8 +140,11 @@ $normal-padding: 10px;
     .well {
         background: $information;
         padding: $normal-padding;
+
+        label {display: inline;}
     }
-    // zebra-stripes
+
+     // zebra-stripes
     .even {
         background: $beige;
     }

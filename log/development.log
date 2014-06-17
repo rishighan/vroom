@@ -26057,3 +26057,83 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (57.8ms)
   Rendered shared/_admin_nav.html.erb (1.5ms)
 Completed 200 OK in 225ms (Views: 93.5ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 20:52:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-06-16 20:54:41 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/admin (23.6ms)
+  Rendered shared/_admin_nav.html.erb (1.4ms)
+Completed 200 OK in 106ms (Views: 65.5ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 20:54:43 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 37ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: imageable_id):
+  app/controllers/posts_controller.rb:6:in `block in new'
+  app/controllers/posts_controller.rb:6:in `times'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 20:54:43 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: imageable_id):
+  app/controllers/posts_controller.rb:6:in `block in new'
+  app/controllers/posts_controller.rb:6:in `times'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (427.1ms)[0m  [1mDROP TABLE "attachments"[0m
+  [1m[35mSQL (18.9ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140613185816'
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (103.6ms)[0m  [1mCREATE TABLE "attachments" ("id" serial primary key, "imageable_id" integer, "imageable_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (27.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613185816"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 20:58:00 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (28.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (140.4ms)
+  Rendered posts/new.html.erb within layouts/admin (141.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 177ms (Views: 123.5ms | ActiveRecord: 32.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-16 22:41:16 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (4.5ms)
+  Rendered posts/new.html.erb within layouts/admin (5.1ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.3ms)

@@ -35,10 +35,9 @@
 
        <p class="well">
 
-        <%= p.label :picture, t('.upload_new_file') %>
-        <%= p.file_field :picture, multiple: true, name: 'upload[picture]' %>
+        <%= p.label :attachment %>
+        <%= p.file_field :attachment, :data=>{url: "posts/#{@post_id}/attachments"} ,:multiple=> "", name: 'picture[picture]', :type=> "file" %>
 
-        <script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="bar" style="width: 0%"></div></div></div></script>
 
        </p>
 

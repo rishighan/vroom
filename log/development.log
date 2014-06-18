@@ -26057,3 +26057,805 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (57.8ms)
   Rendered shared/_admin_nav.html.erb (1.5ms)
 Completed 200 OK in 225ms (Views: 93.5ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:06:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (20.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+ERROR: compiling _app_views_posts__form_html_erb__3427426874146904896_70245847564320 RAISED /Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ':', expecting ')'
+...file_field :id=> "fileupload" :data=>{:url => "/posts/#{@pos...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ',', expecting ')'
+...osts/#{@post.id}/attachments"}, :multiple => "", :name => "p...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ',', expecting ')'
+...", :name => "picture[picture]", :type => "file"  );@output_b...
+...                               ^
+Function body:           def _app_views_posts__form_html_erb__3427426874146904896_70245847564320(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "posts/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  nested_form_for :post, :url => posts_path, :html => {:multipart => true} do |p| @output_buffer.safe_append='
+
+'; if @post.errors.any? 
+@output_buffer.safe_append='<div class="error-explanation">
+<h3>';@output_buffer.append=( pluralize(@post.errors.count, "error")  );@output_buffer.safe_append=' has pervented this post from been saved.</h3>
+<ul>
+';     @post.errors.full_messages.each do |msg| 
+@output_buffer.safe_append='      <li>';@output_buffer.append=( msg );@output_buffer.safe_append='</li>
+';     end 
+@output_buffer.safe_append='</ul>
+</div>
+'; end 
+@output_buffer.safe_append='
+    <p>
+        ';@output_buffer.append=( p.label :title );@output_buffer.safe_append=' <br/>
+        ';@output_buffer.append=( p.text_field(:title, :size => "70") );@output_buffer.safe_append='
+    </p>
+
+    <p class="well">
+    ';@output_buffer.append=( p.label :category_id );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( hidden_field_tag "post[category_ids][]" , nil);@output_buffer.safe_append='
+
+';     Category.all.each do |cat| 
+@output_buffer.safe_append='
+        ';@output_buffer.append=( check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat));@output_buffer.safe_append='
+        ';@output_buffer.append=( label_tag dom_id(cat), cat.title);@output_buffer.safe_append='
+
+';    end 
+@output_buffer.safe_append='
+    </p>
+
+    <p>
+       ';@output_buffer.append=( p.label :content );@output_buffer.safe_append=' <br/>
+       ';@output_buffer.append=( p.text_area(:content, :size => "90x12") );@output_buffer.safe_append='
+
+       <p class="well">
+
+        ';@output_buffer.append=( p.label :picture, t('.upload_new_file') );@output_buffer.safe_append='
+        ';@output_buffer.append=( p.file_field :id=> "fileupload" :data=>{:url => "/posts/#{@post.id}/attachments"}, :multiple => "", :name => "picture[picture]", :type => "file"  );@output_buffer.safe_append='
+
+
+       </p>
+
+        <div class="md-syntax clearfix">
+        <h5>Markdown syntax</h5><br/>
+        <ul class="four columns">
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+            <li> <code>**double asterisks**</code> <strong>bold</strong></li>
+            <li> <code>#This is an H1</code> </li>
+            <li><code>## This is an H2</code></li>
+            <li><code>###### This is an H6 </code></li>
+
+
+        </ul>
+        <ul class="four columns">
+        <li><code>[link](http://rishighan.com "Rishi Ghan\'s website")</code></li>
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+
+
+        </ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https://images.com/icon48.png "Logo Title Text 1")</code>
+        <p>More information: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+        </div>
+
+
+        </div>
+
+ </p>
+
+    <p>
+        ';@output_buffer.append=( p.label :excerpt );@output_buffer.safe_append='<br/>
+        ';@output_buffer.append=( p.text_area(:excerpt, :size => "90x8") );@output_buffer.safe_append='
+    </p>
+
+
+    <p>
+        ';@output_buffer.append=( p.submit );@output_buffer.safe_append='
+    </p>
+
+'; end 
+@output_buffer.safe_append='
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/roweandesign/Sites/personal-website/app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__2398728584610854235__process_action__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3294023355749089521__call__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered posts/_form.html.erb (3.0ms)
+  Rendered posts/new.html.erb within layouts/admin (48.1ms)
+Completed 500 Internal Server Error in 391ms
+
+ActionView::Template::Error (/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ':', expecting ')'
+...file_field :id=> "fileupload" :data=>{:url => "/posts/#{@pos...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ',', expecting ')'
+...osts/#{@post.id}/attachments"}, :multiple => "", :name => "p...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:39: syntax error, unexpected ',', expecting ')'
+...", :name => "picture[picture]", :type => "file"  );@output_b...
+...                               ^):
+    36:        <p class="well">
+    37: 
+    38:         <%= p.label :picture, t('.upload_new_file') %>
+    39:         <%= p.file_field :id=> "fileupload" :data=>{:url => "/posts/#{@post.id}/attachments"}, :multiple => "", :name => "picture[picture]", :type => "file"  %>
+    40: 
+    41: 
+    42:        </p>
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:06:57 -0400
+Processing by PostsController#new as HTML
+ERROR: compiling _app_views_posts__form_html_erb__3427426874146904896_70245846955580 RAISED /Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:42: syntax error, unexpected '<'
+       </p>
+        ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:45: unknown regexp option - h
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:45: syntax error, unexpected tINTEGER, expecting ')'
+        <h5>Markdown syntax</h5><br/>
+                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:47: syntax error, unexpected '<'
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+             ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:47: syntax error, unexpected '<'
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+                                                                 ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: unknown regexp options - cd
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: syntax error, unexpected '<'
+...e>**double asterisks**</code> <strong>bold</strong></li>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:49: syntax error, unexpected '<'
+            <li> <code>#This is an H1</code> </li>
+             ^
+end pattern with unmatched parenthesis: /ul>
+        <ul class="four columns">
+        <li><code>[link](http:/
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:56: syntax error, unexpected tSTRING_BEG, expecting ')'
+...e>[link](http://rishighan.com "Rishi Ghan\'s website")</code...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:56: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected '<'
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+                                ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: unknown regexp option - y
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected ')', expecting keyword_end
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+                                                       ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:60: syntax error, unexpected '<'
+        </ul>
+         ^
+end pattern with unmatched parenthesis: /ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https:/
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:63: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...https://images.com/icon48.png "Logo Title Text 1")</code>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:63: syntax error, unexpected ')', expecting keyword_end
+...icon48.png "Logo Title Text 1")</code>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: syntax error, unexpected tINTEGER, expecting keyword_end
+...ext_area(:excerpt, :size => "90x8") );@output_buffer.safe_ap...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: unterminated string meets end of file
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_posts__form_html_erb__3427426874146904896_70245846955580(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "posts/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  nested_form_for :post, :url => posts_path, :html => {:multipart => true} do |p| @output_buffer.safe_append='
+
+'; if @post.errors.any? 
+@output_buffer.safe_append='<div class="error-explanation">
+<h3>';@output_buffer.append=( pluralize(@post.errors.count, "error")  );@output_buffer.safe_append=' has pervented this post from been saved.</h3>
+<ul>
+';     @post.errors.full_messages.each do |msg| 
+@output_buffer.safe_append='      <li>';@output_buffer.append=( msg );@output_buffer.safe_append='</li>
+';     end 
+@output_buffer.safe_append='</ul>
+</div>
+'; end 
+@output_buffer.safe_append='
+    <p>
+        ';@output_buffer.append=( p.label :title );@output_buffer.safe_append=' <br/>
+        ';@output_buffer.append=( p.text_field(:title, :size => "70") );@output_buffer.safe_append='
+    </p>
+
+    <p class="well">
+    ';@output_buffer.append=( p.label :category_id );@output_buffer.safe_append='<br/>
+    ';@output_buffer.append=( hidden_field_tag "post[category_ids][]" , nil);@output_buffer.safe_append='
+
+';     Category.all.each do |cat| 
+@output_buffer.safe_append='
+        ';@output_buffer.append=( check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat));@output_buffer.safe_append='
+        ';@output_buffer.append=( label_tag dom_id(cat), cat.title);@output_buffer.safe_append='
+
+';    end 
+@output_buffer.safe_append='
+    </p>
+
+    <p>
+       ';@output_buffer.append=( p.label :content );@output_buffer.safe_append=' <br/>
+       ';@output_buffer.append=( p.text_area(:content, :size => "90x12") );@output_buffer.safe_append='
+
+       <p class="well">
+
+        ';@output_buffer.append=( p.label :picture, t('.upload_new_file') );@output_buffer.safe_append='
+        ';@output_buffer.append=( p.file_field :id=> "fileupload,  :data=>{:url => "/posts/#{@post.id}/attachments"}, :multiple => "", :name => "picture[picture]", :type => "file"  );@output_buffer.safe_append='
+
+
+       </p>
+
+        <div class="md-syntax clearfix">
+        <h5>Markdown syntax</h5><br/>
+        <ul class="four columns">
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+            <li> <code>**double asterisks**</code> <strong>bold</strong></li>
+            <li> <code>#This is an H1</code> </li>
+            <li><code>## This is an H2</code></li>
+            <li><code>###### This is an H6 </code></li>
+
+
+        </ul>
+        <ul class="four columns">
+        <li><code>[link](http://rishighan.com "Rishi Ghan\'s website")</code></li>
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+
+
+        </ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https://images.com/icon48.png "Logo Title Text 1")</code>
+        <p>More information: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+        </div>
+
+
+        </div>
+
+ </p>
+
+    <p>
+        ';@output_buffer.append=( p.label :excerpt );@output_buffer.safe_append='<br/>
+        ';@output_buffer.append=( p.text_area(:excerpt, :size => "90x8") );@output_buffer.safe_append='
+    </p>
+
+
+    <p>
+        ';@output_buffer.append=( p.submit );@output_buffer.safe_append='
+    </p>
+
+'; end 
+@output_buffer.safe_append='
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/roweandesign/Sites/personal-website/app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/roweandesign/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__2398728584610854235__process_action__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3294023355749089521__call__callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+  Rendered posts/_form.html.erb (31.7ms)
+  Rendered posts/new.html.erb within layouts/admin (32.6ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:42: syntax error, unexpected '<'
+       </p>
+        ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:45: unknown regexp option - h
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:45: syntax error, unexpected tINTEGER, expecting ')'
+        <h5>Markdown syntax</h5><br/>
+                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:47: syntax error, unexpected '<'
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+             ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:47: syntax error, unexpected '<'
+            <li> <code>*single asterisks*</code> <em>italic</em></li>
+                                                                 ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: unknown regexp options - cd
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: syntax error, unexpected '<'
+...e>**double asterisks**</code> <strong>bold</strong></li>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:48: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:49: syntax error, unexpected '<'
+            <li> <code>#This is an H1</code> </li>
+             ^
+end pattern with unmatched parenthesis: /ul>
+        <ul class="four columns">
+        <li><code>[link](http:/
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:56: syntax error, unexpected tSTRING_BEG, expecting ')'
+...e>[link](http://rishighan.com "Rishi Ghan\'s website")</code...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:56: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected '<'
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+         ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+                                ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: unknown regexp option - y
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: syntax error, unexpected ')', expecting keyword_end
+        <li><code>[relative link](../rest/my/chemistry)</code></li>
+                                                       ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:57: unknown regexp option - l
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:60: syntax error, unexpected '<'
+        </ul>
+         ^
+end pattern with unmatched parenthesis: /ul>
+
+        <div class="thirteen columns clearfix">
+        <code>![alt text](https:/
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:63: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...https://images.com/icon48.png "Logo Title Text 1")</code>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:63: syntax error, unexpected ')', expecting keyword_end
+...icon48.png "Logo Title Text 1")</code>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: syntax error, unexpected tINTEGER, expecting keyword_end
+...ext_area(:excerpt, :size => "90x8") );@output_buffer.safe_ap...
+...                               ^
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: unterminated string meets end of file
+/Users/roweandesign/Sites/personal-website/app/views/posts/_form.html.erb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+    39:         <%= p.file_field :id=> "fileupload,  :data=>{:url => "/posts/#{@post.id}/attachments"}, :multiple => "", :name => "picture[picture]", :type => "file"  %>
+    40: 
+    41: 
+    42:        </p>
+    43: 
+    44:         <div class="md-syntax clearfix">
+    45:         <h5>Markdown syntax</h5><br/>
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:07:10 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (53.0ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (624.8ms)
+  Rendered posts/new.html.erb within layouts/admin (625.8ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 656ms (Views: 600.8ms | ActiveRecord: 53.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:07:47 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (5.3ms)
+  Rendered posts/new.html.erb within layouts/admin (6.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:08:00 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/new.html.erb within layouts/admin (6.0ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:09:31 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/new.html.erb within layouts/admin (4.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:11:25 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/new.html.erb within layouts/admin (5.5ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:11:45 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (13.5ms)
+  Rendered posts/new.html.erb within layouts/admin (14.3ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `id' for #<NestedForm::Builder:0x007fc6c5b380d8>):
+    36:        <p class="well">
+    37: 
+    38:         <%= p.label :picture, t('.upload_new_file') %>
+    39:         <%= p.file_field id="fileupload", data: {url: "/posts/#{p.id}/attachments" }, :multiple => "", :name => "picture[picture]", :type => "file"  %>
+    40: 
+    41: 
+    42:        </p>
+  app/views/posts/_form.html.erb:39:in `block in _app_views_posts__form_html_erb__3427426874146904896_70245815843480'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3427426874146904896_70245815843480'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:15:09 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (5.6ms)
+  Rendered posts/new.html.erb within layouts/admin (6.3ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:15:25 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (5.9ms)
+  Rendered posts/new.html.erb within layouts/admin (6.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:15:34 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (6.9ms)
+  Rendered posts/new.html.erb within layouts/admin (7.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 131.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:22:41 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (6.3ms)
+  Rendered posts/new.html.erb within layouts/admin (7.1ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:22:51 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (7.7ms)
+  Rendered posts/new.html.erb within layouts/admin (8.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"posts"} missing required keys: [:id]):
+    36:        <p class="well">
+    37: 
+    38:         <%= p.label :picture, t('.upload_new_file') %>
+    39:         <%= p.file_field id="fileupload", data: {url: "#{post_path}/attachments" }, :multiple => "", :name => "picture[picture]", :type => "file"  %>
+    40: 
+    41:        </p>
+    42: 
+  app/views/posts/_form.html.erb:39:in `block in _app_views_posts__form_html_erb__3427426874146904896_70245831014860'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3427426874146904896_70245831014860'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___3411412566071451863_70245823619440'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:23:01 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (6.9ms)
+  Rendered posts/new.html.erb within layouts/admin (7.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:23:20 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (8.8ms)
+  Rendered posts/new.html.erb within layouts/admin (9.6ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 72.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:23:28 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (8.0ms)
+  Rendered posts/new.html.erb within layouts/admin (8.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:25:20 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (5.6ms)
+  Rendered posts/new.html.erb within layouts/admin (6.2ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:27:17 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (5.7ms)
+  Rendered posts/new.html.erb within layouts/admin (6.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:28:06 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (5.7ms)
+  Rendered posts/new.html.erb within layouts/admin (6.4ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:36:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (16.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (18.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (330.8ms)
+  Rendered posts/new.html.erb within layouts/admin (404.1ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 931ms (Views: 513.0ms | ActiveRecord: 59.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:39:27 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered posts/_form.html.erb (6.5ms)
+  Rendered posts/new.html.erb within layouts/admin (38.2ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 88.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-06-18 15:43:22 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (5.3ms)
+  Rendered posts/new.html.erb within layouts/admin (20.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 143ms (Views: 140.2ms | ActiveRecord: 0.7ms)

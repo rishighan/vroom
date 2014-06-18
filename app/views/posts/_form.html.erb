@@ -36,10 +36,15 @@
        <p class="well">
 
         <%= p.label :picture, t('.upload_new_file') %>
-        <%= p.file_field :picture, multiple: true, name: 'upload[picture]' %>
+        <%= p.file_field id="fileupload", data: {url: "#{posts_path(@post)}/attachments" }, :multiple => "", :name => "picture[picture]", :type => "file"  %>
+        <!-- Upload and dropzone -->
+        <div id="upload">
+            <div id="dropzone">
+            <div class="title">Drop file to upload</div>
+        </div>
 
-        <script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="bar" style="width: 0%"></div></div></div></script>
-
+        </div>
+        <div class="browse">Browse</div>
        </p>
 
         <div class="md-syntax clearfix">

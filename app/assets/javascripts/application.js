@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-fileupload/basic
+//= require jquery.knob.js
+//= require dropzone.js
 //= require turbolinks
 //= require_tree .
 //= require_jquery_nested_form

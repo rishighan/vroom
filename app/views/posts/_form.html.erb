@@ -1,8 +1,8 @@
-<%= nested_form_for :post, :url => posts_path, :html => {:multipart => true} do |p| %>
+<%= form_for :post, url: posts_path, :html => {:multipart => true} do |p| %>
 
 <% if @post.errors.any? %>
 <div class="error-explanation">
-<h3><%= pluralize(@post.errors.count, "error")  %> has pervented this post from been saved.</h3>
+<h3><%= pluralize(@post.errors.count, "error")  %> has prevented this post from been saved.</h3>
 <ul>
     <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -36,15 +36,10 @@
        <p class="well">
 
         <%= p.label :picture, t('.upload_new_file') %>
-        <%= p.file_field id="fileupload", data: {url: "#{posts_path(@post)}/attachments" }, :multiple => "", :name => "picture[picture]", :type => "file"  %>
-        <!-- Upload and dropzone -->
-        <div id="upload">
-            <div id="dropzone">
-            <div class="title">Drop file to upload</div>
+        <div class="fallback">
+        <input name="file" type="file" id="fileDropzone" multiple />
         </div>
 
-        </div>
-        <div class="browse">Browse</div>
        </p>
 
         <div class="md-syntax clearfix">

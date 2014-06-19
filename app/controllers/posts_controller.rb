@@ -2,8 +2,7 @@ class PostsController < ApplicationController
  layout "admin"
     def new
         @post = Post.new
-
-        4.times {@post.attachments.build}
+        @attachment = Attachment.new
         @post.categories.build
     end
 
@@ -16,17 +15,9 @@ class PostsController < ApplicationController
         @post = Post.new(post_params) #init model with attributes
 
         if @post.save #save model to db by mapping fields to columns
-            format.html {redirect_to @post, notice: "Post was successfully saved."}
-            format.json {
-                data = {id:@post.id, thumb: view_context.image_tag(@post.attachments(:medium))}
-                render json: data, status: :created, location: @post
-            }
-        else
-            format.html{render 'new'}
-            format.json{render json: @post.errors, status:"Can't process this entity"}
+
         end
     end
-
     def show
         @post = Post.find(params[:id])
     end

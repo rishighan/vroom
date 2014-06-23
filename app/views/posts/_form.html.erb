@@ -1,4 +1,4 @@
-<%= form_for :post, url: posts_path, :html => {:multipart => true} do |p| %>
+<%= form_for :post, url: posts_path, :html => {:multipart => true } do |p| %>
 
 <% if @post.errors.any? %>
 <div class="error-explanation">
@@ -37,7 +37,7 @@
 
         <%= p.label :picture, t('.upload_new_file') %>
         <div class="fallback">
-        <input name="file" type="file" id="fileDropzone" multiple />
+        <%= p.file_field  "post[attachments][]", name:"attachment", type:"file", multiple: ""%>
         </div>
 
        </p>

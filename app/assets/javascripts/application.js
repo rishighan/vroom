@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require vendor
+//= require jquery.fileupload
 //= require turbolinks
 //= require_tree .
 //= require_jquery_nested_form

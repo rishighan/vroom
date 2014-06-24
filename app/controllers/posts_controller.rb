@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
  layout "admin"
+
     def new
         @post = Post.new
-        @attachment = Attachment.new
-        @post.categories.build
+        @post.attachments.build
+        @cats = @post.categories.build
     end
 
     def index
@@ -13,13 +14,12 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params) #init model with attributes
-        @attachment = Attachment.new(picture_file_name: params[:file])
 
         respond_to do |format|
         if @post.save #save model to db by mapping fields to columns
                 format.html {redirect_to @post, notice: "Uploaded successfully"}
                 format.json{
-                responseText = {id: @attachment.id, thumb: view_context.image_tag(@attachment.url(:thumb))} 
+                responseText = {id: @attachment.id, thumb: view_context.image_tag(@attachment.url(:thumb))}
                 render json: responseText, status: :created, location: @post
                 }
         else
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
         end
         end
     end
-   
+
     def show
         @post = Post.find(params[:id])
     end
@@ -60,4 +60,6 @@ class PostsController < ApplicationController
         params.require(:post).permit(:title, :content, :picture, :excerpt, :citations)
     end
 
-end
+
+
+ end

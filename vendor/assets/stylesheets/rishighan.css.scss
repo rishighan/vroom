@@ -120,6 +120,7 @@ $normal-padding: 10px;
             }
         }
     }
+
 }
 
 .error-explanation {
@@ -153,6 +154,12 @@ $normal-padding: 10px;
     }
     .odd {
         background: $loconbeige;
+    }
+
+    .field_with_errors {
+        background: none;
+      input,textarea {border:1px solid $rg-red;}
+      label {color:$rg-red;}
     }
     article {
         margin: 0 0 20px 0px;

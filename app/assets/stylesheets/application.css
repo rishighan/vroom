@@ -12,6 +12,7 @@
  *= require_tree .
  *= require syntax
  *= require vendor
+ *= require jquery.fileupload-ui
  *= require rishighan
 
  */

@@ -17,15 +17,11 @@
     </p>
 
     <p class="well">
-    <%= p.label :category_id %><br/>
-    <%= hidden_field_tag "post[category_ids][]" , nil%>
-
-    <% Category.all.each do |cat| %>
-
-        <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
-        <%= label_tag dom_id(cat), cat.title%>
-
-    <%end %>
+   <%= p.label :category_id %><br/>
+<%= p.fields_for :categories, @post.categories do |cat| %>
+    <%= cat.check_box_tag  :title, :id, @post.category_ids.include?(:id) %>
+    <%= label_tag :id, :title %> <br>
+<% end %>
 
     </p>
 
@@ -35,11 +31,8 @@
 
        <p class="well">
 
-        <%= p.label :picture, t('.upload_new_file') %>
-        <div class="fallback">
-        <%= p.file_field  "post[attachments][]", name:"attachment", type:"file", multiple: ""%>
-        </div>
-
+        <%= p.label :picture %>
+        <%= p.file_field :id=> "fileupload", :name=>"picture[picture]", data:{url: "/posts/#{@post.id}/attachments"} %>
        </p>
 
         <div class="md-syntax clearfix">

@@ -9,7 +9,9 @@ RishighanCom::Application.routes.draw do
   root 'home#index'
 
   #posts
-  resources :posts
+  resources :posts do
+    resources :attachments
+  end
 
   #categories
   resources :categories

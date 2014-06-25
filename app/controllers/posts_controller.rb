@@ -4,7 +4,8 @@ class PostsController < ApplicationController
     def new
         @post = Post.new
         @post.attachments.build
-        @categories = Category.all
+        @categories = @post.categories.build
+
     end
 
     def index

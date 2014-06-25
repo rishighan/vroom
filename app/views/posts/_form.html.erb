@@ -18,10 +18,14 @@
 
     <p class="well">
    <%= p.label :category %><br/>
-   <%= Category.all.each do |cat| %>
-    <%= check_box_tag 'cat_ids[]', cat.id, @post.categories.include?(@post) %>
-    <%= cat.title %>
-    <% end %>
+    <%= hidden_field_tag "post[category_ids][]", nil%>
+
+        <% Category.order(:title).each do |cat| %>
+            <label>
+            <%= check_box_tag("post[category_ids][]", cat.id, cat.id.in?(@post.categories.collect(&:id))) %>
+            <%= cat.title %>
+            </label>
+        <% end %>
     </p>
 
     <p>

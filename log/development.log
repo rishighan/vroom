@@ -41813,3 +41813,130 @@ Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/admin (6.2ms)
   Rendered shared/_admin_nav.html.erb (0.4ms)
 Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (16.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20140614174619)
+  [1m[36m (16.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (268.5ms)[0m  DROP TABLE "categories"
+  [1m[36mSQL (9.8ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140614174619'[0m
+  [1m[35m (510.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (150.3ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (49.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentPictureToAttachments (20140624145212)
+  [1m[35m (15.3ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_name" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_updated_at" timestamp
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140624145212"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (23.0ms)[0m  [1mDROP TABLE "categorizations"[0m
+PG::UndefinedTable: ERROR:  table "categorizations" does not exist
+: DROP TABLE "categorizations"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAttachmentPictureToAttachments (20140624145212)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: Method `drop_attached_file` in the migration has been deprecated and will be replaced by `remove_attachment`. (called from drop_attached_file at /Users/roweandesign/.rvm/gems/ruby-2.1.0/bundler/gems/paperclip-73fd31673332/lib/paperclip/schema.rb:43)
+  [1m[35m (43.3ms)[0m  ALTER TABLE "attachments" DROP "picture_file_name"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "attachments" DROP "picture_content_type"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "attachments" DROP "picture_file_size"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "attachments" DROP "picture_updated_at"[0m
+  [1m[35mSQL (44.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140624145212'
+  [1m[36m (30.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCategories (20140614174619)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (40.6ms)[0m  DROP TABLE "categories"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140614174619'[0m
+  [1m[35m (28.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (64.5ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentPictureToAttachments (20140624145212)
+  [1m[35m (15.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_name" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_content_type" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_updated_at" timestamp
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140624145212"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentPictureToAttachments (20140624145212)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: Method `drop_attached_file` in the migration has been deprecated and will be replaced by `remove_attachment`. (called from drop_attached_file at /Users/roweandesign/.rvm/gems/ruby-2.1.0/bundler/gems/paperclip-73fd31673332/lib/paperclip/schema.rb:43)
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "attachments" DROP "picture_file_name"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" DROP "picture_content_type"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "attachments" DROP "picture_file_size"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" DROP "picture_updated_at"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140624145212'[0m
+  [1m[35m (15.7ms)[0m  COMMIT
+Migrating to CreateCategories (20140614174619)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  DROP TABLE "categories"
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140614174619'[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140614174619)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (21.3ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140614174619"]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentPictureToAttachments (20140624145212)
+  [1m[35m (15.0ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_name" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "attachments" ADD COLUMN "picture_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "attachments" ADD COLUMN "picture_updated_at" timestamp
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140624145212"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (36.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategoriesPosts (20140625201537)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (54.3ms)[0m  [1mCREATE TABLE "categories_posts" ("post_id" integer, "category_id" integer) [0m
+  [1m[35m (2.4ms)[0m  CREATE INDEX "index_categories_posts_on_post_id_and_category_id" ON "categories_posts" ("post_id", "category_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE INDEX "index_categories_posts_on_post_id" ON "categories_posts" ("post_id")[0m
+  [1m[35mSQL (32.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625201537"]]
+  [1m[36m (39.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

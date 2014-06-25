@@ -3,8 +3,7 @@ class Post < ActiveRecord::Base
     validates :title, presence: true, length: {minimum: 5}
     validates :content, presence: true
     validates :excerpt, presence: true
-    has_many :categories, :through => :categorizations
-    has_many :categorizations
+    has_and_belongs_to_many :categories, join_table: :categories_posts
     accepts_nested_attributes_for :categories
 
 

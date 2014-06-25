@@ -18,8 +18,8 @@
 
     <p class="well">
    <%= p.label :category %><br/>
-   <%= @posts.each do |cat| %>
-    <%= check_box_tag 'cat_ids[]', cat.id,  %>
+   <%= Category.all.each do |cat| %>
+    <%= check_box_tag 'cat_ids[]', cat.id, @post.categories.include?(@post) %>
     <%= cat.title %>
     <% end %>
     </p>

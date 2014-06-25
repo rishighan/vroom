@@ -1,5 +1,6 @@
 class Attachment < ActiveRecord::Base
   belongs_to :imageable, polymorphic: true
+
   #TODO: revisit different sizes for images.
   has_attached_file :picture,
                     :styles =>{ :medium => "660x",
@@ -15,7 +16,7 @@ class Attachment < ActiveRecord::Base
   # check if asset is image
   # for use in the view
   def image?
-     photo_content_type =~ %r{^(image|(x-)?application)/(bmp|gif|jpeg|jpg|pjpeg|png|x-png)$}
+     picture_content_type =~ %r{^(image|(x-)?application)/(bmp|gif|jpeg|jpg|pjpeg|png|x-png)$}
   end
 
 
@@ -24,7 +25,7 @@ class Attachment < ActiveRecord::Base
   end
 
   def resize
-      geo = Paperclip::Geometry.from_file(photo.to_file(:original))
+      geo = Paperclip::Geometry.from_file(picture.to_file(:original))
 
       ratio = geo.width/geo.height
 
@@ -43,5 +44,6 @@ class Attachment < ActiveRecord::Base
        "#{final_height.round}x#{final_width.round}!"
       end
   end
+
 
 end

@@ -10,15 +10,13 @@ gem 'rails', '4.0.3'
 # but we are going with Postgres, so
 gem 'pg'
 
-
 #nested form
 gem 'nested_form'
 
 #attachments
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-
-#file uploads
-gem "jquery-fileupload-rails"
+# file uploads
+gem 'jquery.fileupload-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

@@ -1,8 +1,8 @@
-<%= nested_form_for :post, :url => posts_path, :html => {:multipart => true} do |p| %>
+<%= form_for :post, url: posts_path, :html => {:multipart => true } do |p| %>
 
 <% if @post.errors.any? %>
 <div class="error-explanation">
-<h3><%= pluralize(@post.errors.count, "error")  %> has pervented this post from been saved.</h3>
+<h3><%= pluralize(@post.errors.count, "error")  %> has prevented this post from been saved.</h3>
 <ul>
     <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -17,15 +17,11 @@
     </p>
 
     <p class="well">
-    <%= p.label :category_id %><br/>
-    <%= hidden_field_tag "post[category_ids][]" , nil%>
-
-    <% Category.all.each do |cat| %>
-
-        <%= check_box_tag "post[category_ids][]", cat.id, @post.category_ids.include?(cat.id), :id=> dom_id(cat)%>
-        <%= label_tag dom_id(cat), cat.title%>
-
-    <%end %>
+   <%= p.label :category %><br/>
+    <%= @categories.each do |cat| %>
+        <%= check_box_tag  cat.id, cat.title, @post.category_ids.include?(cat.id) %>
+        <%= label_tag cat.id, cat.title %> <br>
+    <% end %>
 
     </p>
 
@@ -35,9 +31,11 @@
 
        <p class="well">
 
-        <%= p.label :attachment %>
-        <%= p.file_field :attachment, :data=>{url: "posts/#{@post_id}/attachments"} ,:multiple=> "", name: 'picture[picture]', :type=> "file" %>
 
+        <%= p.label :attachment %>
+
+        <%= p.label :picture %>
+        <%= p.file_field :id=> "fileupload", :name=>"picture[picture]", data:{url: "/posts/#{@post.id}/attachments"} %>
 
        </p>
 

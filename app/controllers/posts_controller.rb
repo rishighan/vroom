@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
  layout "admin"
+
     def new
         @post = Post.new
-
-        4.times {@post.attachments.build}
-        @post.categories.build
+        @post.attachments.build
+        @categories = Category.all
     end
 
     def index
@@ -15,15 +15,17 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params) #init model with attributes
 
+        respond_to do |format|
         if @post.save #save model to db by mapping fields to columns
-            format.html {redirect_to @post, notice: "Post was successfully saved."}
-            format.json {
-                data = {id:@post.id, thumb: view_context.image_tag(@post.attachments(:medium))}
-                render json: data, status: :created, location: @post
-            }
+                format.html {redirect_to @post, notice: "Uploaded successfully"}
+                format.json{
+                responseText = {id: @attachment.id, thumb: view_context.image_tag(@attachment.url(:thumb))}
+                render json: responseText, status: :created, location: @post
+                }
         else
-            format.html{render 'new'}
-            format.json{render json: @post.errors, status:"Can't process this entity"}
+                format.html {render action:"new"}
+                format.json {render json: @attachment.errors, status: "Cannot upload"}
+        end
         end
     end
 
@@ -58,4 +60,6 @@ class PostsController < ApplicationController
         params.require(:post).permit(:title, :content, :picture, :excerpt, :citations)
     end
 
-end
+
+
+ end

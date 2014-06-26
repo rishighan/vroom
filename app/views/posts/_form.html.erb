@@ -38,7 +38,9 @@
         <%= p.label :attachment %>
 
         <%= p.label :picture %>
-        <%= p.file_field :id=> "fileupload", :name=>"picture[picture]", data:{url: "/posts/#{@post.id}/attachments"} %>
+        <%= p.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %>
+        <% # jquery upload template # %>
+        <script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="bar" style="width: 0%"></div></div></div></script>
 
        </p>
 

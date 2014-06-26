@@ -4,7 +4,7 @@ class CreateCategoriesPosts < ActiveRecord::Migration
         t.references :post
         t.references :category
     end
-    add_index :categories_posts, [:post_id, :category_id]
+    add_index :categories_posts, [:post_id, :category_id] #why?
     add_index :categories_posts, :post_id
   end
 

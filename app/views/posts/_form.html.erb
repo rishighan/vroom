@@ -37,38 +37,11 @@
 
         <%= p.label :attachment %>
 
-        <%= p.label :picture %>
-        <%= p.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %>
-        <% # jquery upload template # %>
-        <script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="bar" style="width: 0%"></div></div></div></script>
+
 
        </p>
 
-        <div class="md-syntax clearfix">
-        <h5>Markdown syntax</h5><br/>
-        <ul class="four columns">
-            <li> <code>*single asterisks*</code> <em>italic</em></li>
-            <li> <code>**double asterisks**</code> <strong>bold</strong></li>
-            <li> <code>#This is an H1</code> </li>
-            <li><code>## This is an H2</code></li>
-            <li><code>###### This is an H6 </code></li>
-
-
-        </ul>
-        <ul class="four columns">
-        <li><code>[link](http://rishighan.com "Rishi Ghan's website")</code></li>
-        <li><code>[relative link](../rest/my/chemistry)</code></li>
-
-
-        </ul>
-
-        <div class="thirteen columns clearfix">
-        <code>![alt text](https://images.com/icon48.png "Logo Title Text 1")</code>
-        <p>More information: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown help</a></p>
-        </div>
-
-
-        </div>
+        <%= render "shared/markdownhelp" %>
 
  </p>
 

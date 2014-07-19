@@ -196,8 +196,9 @@ $normal-padding: 10px;
         }
     }
     a {
-        color: $actionitems;
+        color: $black;
         text-decoration: none;
+        background: none;
         &:visited {
             color: $black;
         }

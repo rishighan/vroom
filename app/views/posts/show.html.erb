@@ -5,7 +5,7 @@
         </h2>
         <p>
             <%= markdown(@post.content)  %>
-            <%= image_tag @post.attachments(:medium) %>
+            <%= image_tag(@post.attachments.first.picture.url(:medium)) %>
         </p>
 
 </article>

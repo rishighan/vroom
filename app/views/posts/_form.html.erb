@@ -36,6 +36,11 @@
 
 
         <%= p.label :attachment %>
+        <%= p.fields_for :attachments, Attachment.new do |at| %>
+
+            <%= at.label :picture %>
+            <%= at.file_field :picture %>
+        <% end %>
 
 
 

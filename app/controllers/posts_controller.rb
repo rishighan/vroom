@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
     def new
         @post = Post.new
-        @post.attachments.build
+        @attachments = @post.attachments.build
         @categories = @post.categories.build
 
     end
@@ -15,11 +15,10 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params) #init model with attributes
-
+        @attachment = @post.attachments.new
         respond_to do |format|
         if @post.save #save model to db by mapping fields to columns
                 format.html {redirect_to @post, notice: "Uploaded successfully"}
-
         else
                 format.html {render action:"new"}
 
@@ -29,7 +28,6 @@ class PostsController < ApplicationController
 
     def show
         @post = Post.find(params[:id])
-
     end
 
     def edit
@@ -56,9 +54,8 @@ class PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :content, :excerpt, :citations, {:category_ids => []}, attachments_attributes: [:name, :picture, :file])
+        params.require(:post).permit(:title, :content, :excerpt, :citations, {:category_ids => []}, attachments_attributes: [:imageable_id, :imageable_type, :attachment])
     end
-
 
 
  end

@@ -7,7 +7,7 @@ class Attachment < ActiveRecord::Base
                                 :thumb => Proc.new { |instance| instance.resize }
                     },
                     :url => "assets/pictures/:style/:basename.:extension",
-                    :path =>":rails_root/public/assets/pictures/:style/:basename.:extension"
+                    :path =>"#{Rails.root}/public/assets/pictures/:style/:basename.:extension"
 
   before_post_process :resize_images
 

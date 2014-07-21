@@ -18,10 +18,11 @@ class AttachmentsController < ApplicationController
   end
 
   def create
-    @attachment = @imageable.attachments.build(params[:attachment])
-    @attachment.save
-    redirect_to @imageable
-
+    @attachment = Attachment.new(params[:picture])
+    if @attachment.save
+        redirect_to @attachment.imageable, notice: "Successfully created attachment."
+    else
+        redirect_to @attachment.imageable, notice: "Error occurred creating attachmnent."
   end
 
   def update

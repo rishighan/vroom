@@ -45442,3 +45442,1013 @@ ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
   Rendered /Users/rishighan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:03:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (281.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (105.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (103.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (524.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 30], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (1116.4ms)
+  Rendered shared/_admin_nav.html.erb (1.3ms)
+Completed 200 OK in 2029ms (Views: 1017.7ms | ActiveRecord: 907.9ms)
+
+
+Started DELETE "/posts/30" for 127.0.0.1 at 2014-07-21 11:04:20 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "id"=>"30"}
+  [1m[35mPost Load (19.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "30"]]
+  [1m[36m (9.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 30], ["imageable_type", "Post"]]
+  [1m[36m (203.7ms)[0m  [1mDELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 30[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 30]]
+  [1m[36m (15.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/posts
+Completed 302 Found in 273ms (ActiveRecord: 248.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:04:20 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 13], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (5.5ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 11:07:07 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (62.7ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  Rendered shared/_markdownhelp.html.erb (0.4ms)
+  Rendered posts/_form.html.erb (242.3ms)
+  Rendered posts/new.html.erb within layouts/admin (256.4ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 363ms (Views: 244.5ms | ActiveRecord: 66.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-07-21 11:23:29 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "post"=>{"title"=>"Another test post", "category_ids"=>["", "1", "2"], "content"=>"Bloom shoom toom.", "attachments"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007fdb99c53470 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-95398-1b102ur>, @original_filename="jpeg.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[attachments][picture]\"; filename=\"jpeg.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "excerpt"=>"jlkjklj"}, "commit"=>"Save Post"}
+Unpermitted parameters: attachments
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" IN (1, 2)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (561.0ms)[0m  INSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["content", "Bloom shoom toom."], ["created_at", Mon, 21 Jul 2014 15:23:29 UTC +00:00], ["excerpt", "jlkjklj"], ["title", "Another test post"], ["updated_at", Mon, 21 Jul 2014 15:23:29 UTC +00:00]]
+  [1m[36m (21.6ms)[0m  [1mINSERT INTO "categories_posts" ("post_id", "category_id") VALUES (31, 1)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_posts" ("post_id", "category_id") VALUES (31, 2)
+  [1m[36mSQL (37.4ms)[0m  [1mINSERT INTO "attachments" ("created_at", "imageable_id", "imageable_type", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 21 Jul 2014 15:23:29 UTC +00:00], ["imageable_id", 31], ["imageable_type", "Post"], ["updated_at", Mon, 21 Jul 2014 15:23:29 UTC +00:00]]
+  [1m[35m (11.4ms)[0m  COMMIT
+Redirected to http://localhost/posts/31
+Completed 302 Found in 645ms (ActiveRecord: 634.4ms)
+
+
+Started GET "/posts/31" for 127.0.0.1 at 2014-07-21 11:23:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "31"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 31], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (18.5ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 11:23:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (58.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (89.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:24:21 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 31], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 31], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (8.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 11:24:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.7ms)
+
+
+Started GET "/posts/31/edit" for 127.0.0.1 at 2014-07-21 11:24:24 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "31"]]
+  Rendered posts/edit.html.erb within layouts/admin (13.1ms)
+  Rendered shared/_admin_nav.html.erb (1.1ms)
+Completed 200 OK in 369ms (Views: 366.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:24:33 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (2.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (1.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 31], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 31], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (16.4ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 11:24:33 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.9ms)
+
+
+Started DELETE "/posts/31" for 127.0.0.1 at 2014-07-21 11:24:37 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "id"=>"31"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "31"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 31], ["imageable_type", "Post"]]
+  [1m[36mSQL (16.3ms)[0m  [1mDELETE FROM "attachments" WHERE "attachments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 31
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 31]]
+  [1m[35m (15.7ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 38ms (ActiveRecord: 33.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:24:37 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (5.6ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 11:24:41 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC
+  Rendered shared/_markdownhelp.html.erb (0.0ms)
+  Rendered posts/_form.html.erb (31.0ms)
+  Rendered posts/new.html.erb within layouts/admin (50.7ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-07-21 11:26:01 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "post"=>{"title"=>"The post that decides what posts become", "category_ids"=>["", "1"], "content"=>"Hurr hurr durr durr", "attachments"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fdb9aa480a8 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-95398-1bm5gvo>, @original_filename="jpeg.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[attachments][attachment]\"; filename=\"jpeg.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "excerpt"=>"a;sdkal;dkl;k"}, "commit"=>"Save Post"}
+Unpermitted parameters: attachments
+  [1m[36mCategory Load (27.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Hurr hurr durr durr"], ["created_at", Mon, 21 Jul 2014 15:26:01 UTC +00:00], ["excerpt", "a;sdkal;dkl;k"], ["title", "The post that decides what posts become"], ["updated_at", Mon, 21 Jul 2014 15:26:01 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_posts" ("post_id", "category_id") VALUES (32, 1)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "attachments" ("created_at", "imageable_id", "imageable_type", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 21 Jul 2014 15:26:01 UTC +00:00], ["imageable_id", 32], ["imageable_type", "Post"], ["updated_at", Mon, 21 Jul 2014 15:26:01 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost/posts/32
+Completed 302 Found in 35ms (ActiveRecord: 29.5ms)
+
+
+Started GET "/posts/32" for 127.0.0.1 at 2014-07-21 11:26:01 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "32"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 32], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (2.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 11:26:01 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (40.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:38:00 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 32], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 32], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (36.1ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 11:38:01 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.2ms)
+
+
+Started DELETE "/posts/32" for 127.0.0.1 at 2014-07-21 11:38:04 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "id"=>"32"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "32"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 32], ["imageable_type", "Post"]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "attachments" WHERE "attachments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 32
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 32]]
+  [1m[35m (12.5ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 18ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 11:38:04 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (6.2ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 11:38:06 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC
+  Rendered shared/_markdownhelp.html.erb (0.0ms)
+  Rendered posts/_form.html.erb (22.7ms)
+  Rendered posts/new.html.erb within layouts/admin (43.0ms)
+  Rendered shared/_admin_nav.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-07-21 11:39:11 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eae9bJ6uMqryG2MVDvYKQ08C+Mwk0Ka6eZhmoBr124E=", "post"=>{"title"=>"Blimp Shrimp", "category_ids"=>["", "1"], "content"=>"ASDASDdasdasdas LOWERCASE hurr durr", "attachments"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fdb9abdfc40 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-95398-5ab5cm>, @original_filename="jpeg.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[attachments][attachment]\"; filename=\"jpeg.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "excerpt"=>";sakdl;askdl;akdsl;akdl;kasl;dkal;sdk"}, "commit"=>"Save Post"}
+Unpermitted parameters: attachments
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ASDASDdasdasdas LOWERCASE hurr durr"], ["created_at", Mon, 21 Jul 2014 15:39:11 UTC +00:00], ["excerpt", ";sakdl;askdl;akdsl;akdl;kasl;dkal;sdk"], ["title", "Blimp Shrimp"], ["updated_at", Mon, 21 Jul 2014 15:39:11 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_posts" ("post_id", "category_id") VALUES (33, 1)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "attachments" ("created_at", "imageable_id", "imageable_type", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 21 Jul 2014 15:39:11 UTC +00:00], ["imageable_id", 33], ["imageable_type", "Post"], ["updated_at", Mon, 21 Jul 2014 15:39:11 UTC +00:00]]
+  [1m[35m (14.9ms)[0m  COMMIT
+Redirected to http://localhost/posts/33
+Completed 302 Found in 23ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/posts/33" for 127.0.0.1 at 2014-07-21 11:39:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "33"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 33], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (2.9ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 11:39:11 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (40.2ms)
+
+
+Started GET "/posts/33" for 127.0.0.1 at 2014-07-21 12:29:18 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"33"}
+Completed 500 Internal Server Error in 15ms
+
+ArgumentError (No association found for name `pictures'. Has it been defined yet?):
+  app/models/post.rb:14:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:30:in `show'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 17:35:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (108.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (46.8ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (37.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (141.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 33], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 33], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (475.9ms)
+  Rendered shared/_admin_nav.html.erb (1.4ms)
+Completed 200 OK in 707ms (Views: 219.0ms | ActiveRecord: 352.0ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 17:35:02 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (53.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (83.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:35:33 -0400
+Processing by PostsController#new as HTML
+  [1m[36mCategory Load (54.1ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  Rendered shared/_markdownhelp.html.erb (0.4ms)
+  Rendered posts/_form.html.erb (207.4ms)
+  Rendered posts/new.html.erb within layouts/admin (215.8ms)
+  Rendered shared/_admin_nav.html.erb (0.9ms)
+Completed 200 OK in 335ms (Views: 207.8ms | ActiveRecord: 58.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:43:26 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 56ms
+
+ArgumentError (No association found for name `picture'. Has it been defined yet?):
+  app/models/attachment.rb:13:in `<class:Attachment>'
+  app/models/attachment.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (82.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:43:45 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 91ms
+
+ArgumentError (No association found for name `pictures'. Has it been defined yet?):
+  app/models/attachment.rb:13:in `<class:Attachment>'
+  app/models/attachment.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:53:13 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 35ms
+
+NoMethodError (undefined method `build_attachment' for #<Post:0x007f93a346b5c0>):
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:53:29 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `build_attachments' for #<Post:0x007f93a6a17b10>):
+  app/controllers/posts_controller.rb:6:in `new'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:53:37 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC
+  Rendered shared/_markdownhelp.html.erb (0.4ms)
+  Rendered posts/_form.html.erb (43.8ms)
+  Rendered posts/new.html.erb within layouts/admin (57.4ms)
+  Rendered shared/_admin_nav.html.erb (0.7ms)
+Completed 200 OK in 139ms (Views: 98.9ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-07-21 17:54:02 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGkppOdOPuNWXt1fVT60FUhRSq+TOCIiZHJIZJvcl+Y=", "post"=>{"title"=>"xcasdasd", "category_ids"=>["", "2"], "content"=>"dasdasdsd", "attachments"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f93a34c8fe0 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-1845-1cufj98>, @original_filename="main_banner_image_weboptimized.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[attachments][picture]\"; filename=\"main_banner_image_weboptimized.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "excerpt"=>"kjlkjlkj"}, "commit"=>"Save Post"}
+Unpermitted parameters: attachments
+  [1m[36mCategory Load (38.6ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (27.6ms)[0m  BEGIN
+  [1m[36mSQL (253.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "dasdasdsd"], ["created_at", Mon, 21 Jul 2014 21:54:02 UTC +00:00], ["excerpt", "kjlkjlkj"], ["title", "xcasdasd"], ["updated_at", Mon, 21 Jul 2014 21:54:02 UTC +00:00]]
+  [1m[35m (23.7ms)[0m  INSERT INTO "categories_posts" ("post_id", "category_id") VALUES (34, 2)
+  [1m[36mSQL (37.1ms)[0m  [1mINSERT INTO "attachments" ("created_at", "imageable_id", "imageable_type", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 21 Jul 2014 21:54:02 UTC +00:00], ["imageable_id", 34], ["imageable_type", "Post"], ["updated_at", Mon, 21 Jul 2014 21:54:02 UTC +00:00]]
+  [1m[35m (20.3ms)[0m  COMMIT
+Redirected to http://localhost/posts/34
+Completed 302 Found in 412ms (ActiveRecord: 402.1ms)
+
+
+Started GET "/posts/34" for 127.0.0.1 at 2014-07-21 17:54:02 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "34"]]
+  [1m[35mAttachment Load (0.5ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 34], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (20.6ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 17:54:03 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 17:54:55 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 33], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 33], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 34], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 34], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (12.8ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 319ms (Views: 316.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 17:54:56 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.1ms)
+
+
+Started DELETE "/posts/33" for 127.0.0.1 at 2014-07-21 17:55:07 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uGkppOdOPuNWXt1fVT60FUhRSq+TOCIiZHJIZJvcl+Y=", "id"=>"33"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "33"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 33], ["imageable_type", "Post"]]
+  [1m[36mSQL (90.7ms)[0m  [1mDELETE FROM "attachments" WHERE "attachments"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 33
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 33]]
+  [1m[35m (15.5ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 113ms (ActiveRecord: 108.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 17:55:08 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 34], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 34], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (8.1ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 17:55:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.3ms)
+
+
+Started DELETE "/posts/34" for 127.0.0.1 at 2014-07-21 17:55:12 -0400
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uGkppOdOPuNWXt1fVT60FUhRSq+TOCIiZHJIZJvcl+Y=", "id"=>"34"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "34"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 34], ["imageable_type", "Post"]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "attachments" WHERE "attachments"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  DELETE FROM "categories_posts" WHERE "categories_posts"."post_id" = 34
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 17:55:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 13], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (6.9ms)
+  Rendered shared/_admin_nav.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-07-21 17:55:27 -0400
+Processing by PostsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC
+  Rendered shared/_markdownhelp.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (18.6ms)
+  Rendered posts/new.html.erb within layouts/admin (32.2ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-07-21 17:55:42 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGkppOdOPuNWXt1fVT60FUhRSq+TOCIiZHJIZJvcl+Y=", "post"=>{"title"=>"kjhkhkjhkjhjkkjh", "category_ids"=>["", "2"], "content"=>"khkjhkjhjkhl", "attachments"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f93a4a51308 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-1845-70li0a>, @original_filename="footer.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[attachments][picture]\"; filename=\"footer.png\"\r\nContent-Type: image/png\r\n">}, "excerpt"=>"khkjhkjhjkh"}, "commit"=>"Save Post"}
+Unpermitted parameters: attachments
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "excerpt", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "khkjhkjhjkhl"], ["created_at", Mon, 21 Jul 2014 21:55:42 UTC +00:00], ["excerpt", "khkjhkjhjkh"], ["title", "kjhkhkjhkjhjkkjh"], ["updated_at", Mon, 21 Jul 2014 21:55:42 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_posts" ("post_id", "category_id") VALUES (35, 2)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "attachments" ("created_at", "imageable_id", "imageable_type", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 21 Jul 2014 21:55:42 UTC +00:00], ["imageable_id", 35], ["imageable_type", "Post"], ["updated_at", Mon, 21 Jul 2014 21:55:42 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost/posts/35
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/posts/35" for 127.0.0.1 at 2014-07-21 17:55:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "35"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 35], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (2.3ms)
+  Rendered shared/_admin_nav.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 17:55:42 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/posts/35" for 127.0.0.1 at 2014-07-21 17:56:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "35"]]
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 35], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (25.5ms)
+  Rendered shared/_admin_nav.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 26.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 17:56:42 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.5ms)
+
+
+Started GET "/posts/35" for 127.0.0.1 at 2014-07-21 17:57:10 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "35"]]
+  [1m[35mAttachment Load (0.3ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 35], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (2.8ms)
+  Rendered shared/_admin_nav.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 17:57:10 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.5ms)
+
+
+Started GET "/posts/35" for 127.0.0.1 at 2014-07-21 17:59:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "35"]]
+  [1m[36mAttachment Load (4.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 35], ["imageable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/admin (45.2ms)
+  Rendered shared/_admin_nav.html.erb (1.5ms)
+Completed 200 OK in 143ms (Views: 62.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/pictures/medium/missing.png" for 127.0.0.1 at 2014-07-21 17:59:51 -0400
+
+ActionController::RoutingError (No route matches [GET] "/pictures/medium/missing.png"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.6ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (63.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-07-21 17:59:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAttachment Load (0.7ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 11], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.6ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 12], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.6ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 13], ["imageable_type", "Post"]]
+  [1m[36mAttachment Load (0.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2[0m  [["imageable_id", 35], ["imageable_type", "Post"]]
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."imageable_id" = $1 AND "attachments"."imageable_type" = $2  [["imageable_id", 35], ["imageable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/admin (20.2ms)
+  Rendered shared/_admin_nav.html.erb (1.2ms)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-07-21 17:59:53 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  /usr/local/Cellar/passenger/4.0.44/libexec/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/roweandesign/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.6ms)

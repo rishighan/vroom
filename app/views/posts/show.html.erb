@@ -6,7 +6,7 @@
         <p>
             <%= markdown(@post.content)  %>
             <%= @post.attachments.each do |at| %>
-              <%= image_tag(at.picture(:medium)) %>
+              <%= image_tag at.picture(:medium) %>
             <% end %>
         </p>
 

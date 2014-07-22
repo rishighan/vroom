@@ -34,15 +34,10 @@
 
        <p class="well">
 
-
-        <%= p.label :attachment %>
-        <%= p.fields_for :attachments, @post.attachments.build do |at| %>
-
+        <%= p.fields_for :attachments do |at| %>
             <%= at.label :picture %>
             <%= at.file_field :picture %>
         <% end %>
-
-
 
        </p>
 

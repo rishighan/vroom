@@ -5,11 +5,13 @@
 
  <% @posts.each do |post| %>
     <article class="clearfix <%= cycle('even', 'odd') %>">
-    <h5><%=post.id%></h5>
+    <h5><%= post.id%></h5>
     <h2><%= post.title %> </h2>
     <p>
         <%= markdown(post.content) %>
-        <%= image_tag post.attachments(:small) if post.attachments.present? %>
+        <%= @post.attachments.each do |at| %>
+            <%= image_tag at.picture.url %>
+        <% end %>
 
 
     </p>

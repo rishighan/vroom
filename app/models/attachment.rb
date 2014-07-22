@@ -1,13 +1,13 @@
 class Attachment < ActiveRecord::Base
-  belongs_to :imageable, polymorphic: true
+  belongs_to :imageable, :polymorphic => true
 
   #TODO: revisit different sizes for images.
   has_attached_file :picture,
                     :styles =>{ :medium => "660x",
                                 :thumb => Proc.new { |instance| instance.resize }
                     },
-                    :url => "assets/pictures/:style/:basename.:extension",
-                    :path =>"#{Rails.root}/public/assets/pictures/:style/:basename.:extension"
+                    :url => "attachments/pictures/:style/:basename.:extension",
+                    :path =>"#{Rails.root}/public/attachments/pictures/:style/:basename.:extension"
 
   before_post_process :resize_images
 

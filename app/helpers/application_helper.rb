@@ -8,8 +8,7 @@ class HTML < Redcarpet::Render::HTML
   include Rouge::Plugins::Redcarpet # yep, that's it.
 end
 
-
- def markdown(text)
+  def markdown(text)
     options = {
       filter_html:     false,
       hard_wrap:       true,

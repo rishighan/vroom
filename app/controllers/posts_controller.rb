@@ -1,22 +1,21 @@
 class PostsController < ApplicationController
  layout "admin"
 
+
     def new
         @post = Post.new
-        @post.attachments.build
         @categories = @post.categories.build
+        @post.attachments.build
 
     end
 
     def index
         @posts = Post.all
-        @attachment = Attachment.all
     end
 
     def create
         @post = Post.new(post_params) #init model with attributes
-
-
+        @post.attachments.build(params[:attachments])
         respond_to do |format|
         if @post.save #save model to db by mapping fields to columns
                 format.html {redirect_to @post, notice: "Uploaded successfully"}
@@ -53,9 +52,14 @@ class PostsController < ApplicationController
         redirect_to posts_path
     end
 
+    def load_imageable
+        resource, id = request.path.split('/')[1, 2]
+        @imageable  = resource.singularize.classify.constantize.find(id)
+    end
+
     private
     def post_params
-        params.require(:post).permit(:title, :content, :excerpt, :citations, {:category_ids => []}, attachments_attributes: [:picture])
+        params.require(:post).permit(:title, :content, :excerpt, :citations, {:category_ids => []}, attachments_attributes: [:picture, :name])
     end
 
 
